@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" font-family="Inter, 'DejaVu Sans', Arial, sans-serif" role="img" aria-label="Modification: speed-control dial wiring">
+<title>Modification: speed-control dial wiring</title>
+<defs><marker id="ahD62828" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D62828"/></marker></defs>
+<rect x="1.0" y="1.0" width="898.0" height="278.0" rx="14" fill="#FBF8F0" stroke="#DDD5C2" stroke-width="2" opacity="1"/>
+<rect x="30.0" y="90.0" width="120.0" height="70.0" rx="8" fill="#1F2937" stroke="none" stroke-width="1.5" opacity="1"/>
+<text x="90.0" y="123.0" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Battery</text>
+<text x="90.0" y="141.0" font-size="11.5" font-weight="400" fill="#FFFFFF" text-anchor="middle">4 × AA · 6 V</text>
+<rect x="185.0" y="90.0" width="140.0" height="70.0" rx="8" fill="#9CA3AF" stroke="none" stroke-width="1.5" opacity="1"/>
+<text x="255.0" y="123.0" font-size="14" font-weight="700" fill="#1B2A4A" text-anchor="middle">Fuse + switch</text>
+<text x="255.0" y="141.0" font-size="11.5" font-weight="400" fill="#1B2A4A" text-anchor="middle">as before</text>
+<rect x="360.0" y="70.0" width="190.0" height="110.0" rx="8" fill="#2E7D32" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="455.0" cy="112.0" r="22.0" fill="#1E3A8A" stroke="#93C5FD" stroke-width="2" opacity="1"/>
+<line x1="455.0" y1="112.0" x2="455.0" y2="94.0" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="1"/>
+<text x="455.0" y="155.0" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">PWM speed module</text>
+<text x="455.0" y="171.0" font-size="11.5" font-weight="400" fill="#D1FAE5" text-anchor="middle">(works at 6 V, ≥ 1 A)</text>
+<text x="372.0" y="94.0" font-size="10" font-weight="700" fill="#D1FAE5" text-anchor="start">IN+</text>
+<text x="372.0" y="110.0" font-size="10" font-weight="700" fill="#D1FAE5" text-anchor="start">IN−</text>
+<text x="540.0" y="94.0" font-size="10" font-weight="700" fill="#D1FAE5" text-anchor="end">OUT+</text>
+<text x="540.0" y="110.0" font-size="10" font-weight="700" fill="#D1FAE5" text-anchor="end">OUT−</text>
+<rect x="585.0" y="90.0" width="115.0" height="70.0" rx="8" fill="#E63946" stroke="none" stroke-width="1.5" opacity="1"/>
+<text x="642.5" y="123.0" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Hold button</text>
+<text x="642.5" y="141.0" font-size="11.5" font-weight="400" fill="#FFFFFF" text-anchor="middle">in OUT+</text>
+<rect x="735.0" y="95.0" width="135.0" height="60.0" rx="6" fill="#B8C0C8" stroke="#6B7280" stroke-width="1.5" opacity="1"/>
+<text x="802.0" y="124.0" font-size="14" font-weight="700" fill="#1B2A4A" text-anchor="middle">N20 cutter</text>
+<text x="802.0" y="141.0" font-size="12" font-weight="400" fill="#1B2A4A" text-anchor="middle">motor</text>
+<line x1="150.0" y1="125.0" x2="181.0" y2="125.0" stroke="#D62828" stroke-width="4" stroke-linecap="round" opacity="1" marker-end="url(#ahD62828)"/>
+<line x1="325.0" y1="125.0" x2="356.0" y2="125.0" stroke="#D62828" stroke-width="4" stroke-linecap="round" opacity="1" marker-end="url(#ahD62828)"/>
+<line x1="550.0" y1="125.0" x2="581.0" y2="125.0" stroke="#D62828" stroke-width="4" stroke-linecap="round" opacity="1" marker-end="url(#ahD62828)"/>
+<line x1="700.0" y1="125.0" x2="731.0" y2="125.0" stroke="#D62828" stroke-width="4" stroke-linecap="round" opacity="1" marker-end="url(#ahD62828)"/>
+<path d="M802,155 L802,210 L90,210 L90,160" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text x="450.0" y="232.0" font-size="12.5" font-weight="400" fill="#5A6673" text-anchor="middle">black (−) wires join back to the battery through the module's IN− / OUT−</text>
+<text x="450.0" y="44.0" font-size="13.5" font-weight="700" fill="#1B2A4A" text-anchor="middle">Turn the knob to find the slowest knife speed that still cuts cleanly</text>
+</svg>

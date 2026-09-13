@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cress Farming &mdash; Build a Cress Combine Harvester</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+    <div class="brand"><a href="index.html"><span class="accent">Cress</span> Farming</a></div>
+    <div class="nav-links">
+        <a href="#slide-01">Pitch</a>
+        <a href="#slide-04">Design</a>
+        <a href="#slide-09">Shopping</a>
+        <a href="#slide-12">Build</a>
+        <a href="#slide-20">Upgrades</a>
+        <a href="#slide-26">Safety</a>
+        <a href="Cress_Farming.pdf">PDF report</a>
+        <a href="https://github.com/BrendanJamesLynskey/JW">Hub</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="series-label">JW Projects &mdash; Cress Farming</div>
+    <h1>Build a <span class="accent">Cress</span> Combine <span class="accent-2">Harvester</span></h1>
+    <p class="subtitle">A small working harvester that cuts home-grown cress with a scissor-action knife, driven by a tiny N20 gear motor. How real combines work, coloured diagrams, a shopping list, step-by-step build instructions, a safety plan &mdash; and seven ways to upgrade it.</p>
+    <div class="tags">
+        <span class="tag">N20 gear motor</span>
+        <span class="tag r">Scissor cutter bar</span>
+        <span class="tag g">6 V batteries</span>
+        <span class="tag y">Hold-to-run safety</span>
+        <span class="tag p">7 upgrades</span>
+        <span class="tag">Egg &amp; cress sandwiches</span>
+    </div>
+    <div class="actions">
+        <a class="btn" href="#slide-01">Start the presentation &darr;</a>
+        <a class="btn secondary" href="Cress_Farming.pdf">Download the PDF report</a>
+    </div>
+</header>
+
+<section class="slide deck-only" id="slide-00">
+    <div class="slide-number">00</div>
+    <h2>Topics in this deck</h2>
+    <ul class="contents-list">
+        <li><a href="#slide-01">The pitch &mdash; why this is a brilliant idea</a></li>
+        <li><a href="#slide-02">How a real combine harvester works</a></li>
+        <li><a href="#slide-03">Meet the Cress Combine</a></li>
+        <li><a href="#slide-04">Top view and key sizes</a></li>
+        <li><a href="#slide-05">The cutter: an N20 motor and a pair of scissors</a></li>
+        <li><a href="#slide-06">How a scissor cut works</a></li>
+        <li><a href="#slide-07">The numbers behind a clean cut</a></li>
+        <li><a href="#slide-08">Interactive: cutter-bar simulator</a></li>
+        <li><a href="#slide-09">Shopping list</a></li>
+        <li><a href="#slide-10">Tools, and who does what</a></li>
+        <li><a href="#slide-11">Grow the cress first</a></li>
+        <li><a href="#slide-12">Cutting templates</a></li>
+        <li><a href="#slide-13">Build 1 &mdash; Rails, chassis and wheels</a></li>
+        <li><a href="#slide-14">Build 2 &mdash; The cutter bar sandwich</a></li>
+        <li><a href="#slide-15">Build 3 &mdash; Motor, crank and pitman arm</a></li>
+        <li><a href="#slide-16">Build 4 &mdash; Header arms, reel and belt</a></li>
+        <li><a href="#slide-17">Build 5 &mdash; Wiring</a></li>
+        <li><a href="#slide-18">Build 6 &mdash; Ramp, tank and first harvest</a></li>
+        <li><a href="#slide-19">Troubleshooting</a></li>
+        <li><a href="#slide-20">Upgrades &mdash; overview</a></li>
+        <li><a href="#slide-21">Upgrade 1 &mdash; Adjustable cutting height</a></li>
+        <li><a href="#slide-22">Upgrade 2 &mdash; Speed dial</a></li>
+        <li><a href="#slide-23">Upgrades 3 &amp; 4 &mdash; Self-driving with automatic stop</a></li>
+        <li><a href="#slide-24">Upgrades 5 &amp; 6 &mdash; Wider header and 3D-printed cutter</a></li>
+        <li><a href="#slide-25">Upgrade 7 &mdash; Conveyor-belt feeder</a></li>
+        <li><a href="#slide-26">The safety plan</a></li>
+        <li><a href="#slide-27">What I'll learn</a></li>
+        <li><a href="#slide-28">Jargon buster</a></li>
+        <li><a href="#slide-29">Cheat sheet &mdash; so, Mum&hellip;?</a></li>
+    </ul>
+</section>
+
+<!-- ============================================================ PITCH -->
+<section class="slide" id="slide-01">
+    <div class="slide-number">01</div>
+    <h2>The pitch &mdash; why this is a brilliant idea</h2>
+    <p>Mum, this project <strong>grows real food and builds a real machine</strong> at the same time. The cress takes a week to grow on the windowsill. While it grows, I build a small harvester, about the size of a shoebox lid, that rolls along two wooden rails beside the tray. It snips the cress with a knife that works like a pair of scissors, and sweeps it into a little tank.</p>
+
+    <div class="metric-grid">
+        <div class="metric"><div class="metric-label">Cost</div><div class="metric-value">&asymp; &pound;20</div></div>
+        <div class="metric"><div class="metric-label">Build time</div><div class="metric-value">2 afternoons</div></div>
+        <div class="metric"><div class="metric-label">Grow time</div><div class="metric-value">7 days</div></div>
+        <div class="metric"><div class="metric-label">Battery</div><div class="metric-value">6 V</div></div>
+        <div class="metric"><div class="metric-label">Knife</div><div class="metric-value">Plastic</div></div>
+    </div>
+
+    <div class="diagram-grid cols-2">
+        <div class="diagram-panel g">
+            <h4>It&rsquo;s safe</h4>
+            <p>Four AA batteries &mdash; the same as a toy car, far too low to give a shock. The knife is <strong>plastic</strong>, not metal. It only runs while a button is <strong>held down</strong>, and a self-resetting fuse cuts the power if anything jams.</p>
+        </div>
+        <div class="diagram-panel y">
+            <h4>It&rsquo;s cheap and tidy</h4>
+            <p>Foam board, lolly sticks, bottle caps, skewers and one &pound;4 motor. It all fits in a shoebox. The mess is kitchen paper and a few seeds. No paint, no sawdust.</p>
+        </div>
+        <div class="diagram-panel accent-border">
+            <h4>It&rsquo;s real engineering</h4>
+            <p>The cutter works exactly like the knife on a real combine harvester. Building it means measuring, working out gear ratios, wiring a circuit and fixing things when they don&rsquo;t work first time.</p>
+        </div>
+        <div class="diagram-panel r">
+            <h4>It&rsquo;s lunch</h4>
+            <p>Cress is one of the easiest things anyone can grow &mdash; and at the end there are egg &amp; cress sandwiches for everyone. I grew them, harvested them and made them.</p>
+        </div>
+    </div>
+
+    <div class="callout">
+        <div class="callout-label">The deal</div>
+        <p>I do the planning, measuring, building, wiring and testing. A grown-up does the <strong>craft-knife cutting</strong> and the <strong>hot glue</strong>, and goes through the safety checklist with me before the first run. Everything is written down in this presentation and in the <a href="Cress_Farming.pdf">PDF report</a>.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-02">
+    <div class="slide-number">02</div>
+    <h2>How a real combine harvester works</h2>
+    <p>A combine harvester is called a <em>combine</em> because it combines several farm jobs into one machine. Driving across a wheat field, it does five things in a row:</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/compare.svg" alt="A real combine harvester and the cress combine side by side, with matching coloured parts">
+        <figcaption class="photo-caption">Same colours, same jobs. The cress combine keeps the reel, the cutter bar, the feeder and the tank &mdash; and leaves out the threshing drum, because we eat the whole leaf, not just the seeds.</figcaption>
+    </figure>
+
+    <div class="diagram-grid cols-3">
+        <div class="diagram-panel p">
+            <h4>1 &middot; Reel</h4>
+            <p>A big slowly turning paddle wheel at the front. It gently pushes the stalks back onto the knife so they fall the right way.</p>
+        </div>
+        <div class="diagram-panel r">
+            <h4>2 &middot; Cutter bar</h4>
+            <p>A long row of pointed guards with a knife sliding back and forth over them. Every stalk gets snipped like scissors, about <strong>1,000 times a minute</strong>.</p>
+        </div>
+        <div class="diagram-panel y">
+            <h4>3 &middot; Feeder</h4>
+            <p>An auger and a conveyor carry the cut crop back and up into the machine.</p>
+        </div>
+        <div class="diagram-panel accent-border">
+            <h4>4 &middot; Threshing</h4>
+            <p>A spinning drum knocks the grain out of the ears; sieves and a fan blow the chaff away. <strong>We skip this</strong> &mdash; cress leaves are the bit we want.</p>
+        </div>
+        <div class="diagram-panel g">
+            <h4>5 &middot; Grain tank</h4>
+            <p>Clean grain collects in a tank on top, and a long pipe (the unloading auger) empties it into a trailer.</p>
+        </div>
+        <div class="diagram-panel">
+            <h4>And the cress combine?</h4>
+            <p>Reel, cutter bar, a ramp instead of the feeder, and a tank. Four of the five jobs, at about one-fortieth of the size.</p>
+        </div>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th></th><th>Real combine</th><th>Cress combine</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Length</strong></td><td>About 10 m</td><td>About 24 cm</td></tr>
+                <tr><td><strong>Cutting width</strong></td><td>6&ndash;12 m</td><td>90 mm</td></tr>
+                <tr><td><strong>Power</strong></td><td>Hundreds of horsepower (a diesel engine)</td><td>About 1 watt (an N20 motor)</td></tr>
+                <tr><td><strong>Knife cuts per minute</strong></td><td>About 1,000</td><td>About 600</td></tr>
+                <tr><td><strong>Price</strong></td><td>Hundreds of thousands of pounds</td><td>About &pound;20</td></tr>
+                <tr><td><strong>Harvest</strong></td><td>Wheat, barley, oilseed rape</td><td>Cress (and maybe mustard)</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ============================================================ DESIGN -->
+<section class="slide" id="slide-03">
+    <div class="slide-number">03</div>
+    <h2>Meet the Cress Combine</h2>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/side_view.svg" alt="Side view of the cress combine with labelled parts">
+        <figcaption class="photo-caption">Side view. The machine rolls on bottle-cap wheels along two wooden rails either side of a shallow cress tray. The reel sweeps, the knife snips, and the cut cress slides up a short ramp into the tank.</figcaption>
+    </figure>
+
+    <div class="callout g">
+        <div class="callout-label">How it works in one sentence</div>
+        <p>You push it along the rails holding the button; the wheels turn the reel through a rubber-band belt; the reel sweeps cress onto a knife that snips back and forth <strong>ten times a second</strong>; and the cut cress is pushed up a ramp into the tank.</p>
+    </div>
+
+    <div class="diagram-grid cols-3">
+        <div class="diagram-panel p">
+            <h4>Reel</h4>
+            <p>Four card paddles on a skewer. Driven by the wheels, so it only turns when the machine moves.</p>
+        </div>
+        <div class="diagram-panel r">
+            <h4>Cutter bar</h4>
+            <p>A plastic guard comb (fixed) with a plastic knife (sliding) on top &mdash; ten teeth, 10&nbsp;mm apart.</p>
+        </div>
+        <div class="diagram-panel y">
+            <h4>N20 motor + crank</h4>
+            <p>A tiny geared motor turns a crank; a lolly-stick arm turns the spinning into sliding.</p>
+        </div>
+        <div class="diagram-panel y">
+            <h4>Ramp &amp; tank</h4>
+            <p>A gentle card ramp behind the knife leads into a dustpan-shaped plastic tub.</p>
+        </div>
+        <div class="diagram-panel g">
+            <h4>Battery &amp; button</h4>
+            <p>4&nbsp;&times;&nbsp;AA box on top; fuse, ON/OFF switch and a hold-to-run button on the handle.</p>
+        </div>
+        <div class="diagram-panel accent-border">
+            <h4>Chassis &amp; rails</h4>
+            <p>Foam-board body, skewer axles in straw bearings, bottle-cap wheels on 10&nbsp;mm wooden rails.</p>
+        </div>
+    </div>
+
+    <div class="callout y">
+        <div class="callout-label">Honest note</div>
+        <p>This is a <strong>design to build</strong>, not a kit that has been tested a hundred times. Every size here is a sensible starting point, and the troubleshooting page says what to change if something doesn&rsquo;t work first time. That&rsquo;s normal &mdash; it&rsquo;s what engineers do.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-04">
+    <div class="slide-number">04</div>
+    <h2>Top view and key sizes</h2>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/plan_view.svg" alt="Top view of the cress combine showing the rails, header, tank, battery and dimensions">
+        <figcaption class="photo-caption">Looking down from above. The motor sits on an <em>outrigger</em> beyond one rail, so it never touches the crop. The belt runs down the other side from the reel pulley to the front axle.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Size</th><th>Value</th><th>Why this number</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Cut width</strong></td><td>90 mm (100 mm guard)</td><td>Fits a 110 mm-wide tray between the rails</td></tr>
+                <tr><td><strong>Rail spacing</strong></td><td>120 mm, centre to centre</td><td>10 mm rails sit right against the tray walls</td></tr>
+                <tr><td><strong>Tray</strong></td><td>&le; 110 mm wide, 20&ndash;30 mm deep</td><td>Shallow, so the cutter passes just above the rim</td></tr>
+                <tr><td><strong>Cress bed</strong></td><td>About 5 mm below the rim</td><td>Build it up with folded kitchen paper</td></tr>
+                <tr><td><strong>Cut height</strong></td><td>15 mm above the bed</td><td>Leaves the roots and seed cases behind</td></tr>
+                <tr><td><strong>Wheels</strong></td><td>30 mm bottle caps</td><td>Radius 15 mm &mdash; sets the reel speed ratio</td></tr>
+                <tr><td><strong>Wheelbase</strong></td><td>75 mm</td><td>Long enough to run straight, short enough to be light</td></tr>
+                <tr><td><strong>Tooth pitch / stroke</strong></td><td>10 mm / 10 mm</td><td>Each knife tooth sweeps exactly one gap</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="callout">
+        <div class="callout-label">Wider tray?</div>
+        <p>If your tray is wider than 110&nbsp;mm, move the rails out and make the cutter parts longer. <a href="#slide-24">Upgrade 5</a> shows how, and how to check the motor can cope.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-05">
+    <div class="slide-number">05</div>
+    <h2>The cutter: an N20 motor and a pair of scissors</h2>
+    <p>An <strong>N20 gear motor</strong> is a tiny electric motor joined to a gearbox. The whole thing is about 12&nbsp;mm across and 25&nbsp;mm long &mdash; smaller than a sugar cube and a half &mdash; and weighs about 10&nbsp;g. The gearbox trades speed for strength: the motor inside spins thousands of times a minute, but the output shaft turns slowly and strongly. We use the <strong>6&nbsp;V, 300&nbsp;RPM</strong> version: five turns a second.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/cutter_mechanism.svg" alt="Cutter bar mechanism with guard comb, knife, crank and pitman arm">
+        <figcaption class="photo-caption">The cutter bar from above. The motor sits on top of a crank disc. A pin 5&nbsp;mm from the centre drives the pitman arm, which pushes and pulls the knife 10&nbsp;mm left and right. Inset: the knife sandwiched flat between the guard and the mount plate.</figcaption>
+    </figure>
+
+    <div class="diagram-grid cols-2">
+        <div class="diagram-panel y">
+            <h4>Turning spin into slide</h4>
+            <p>A pin on a spinning disc goes round in a circle. Join a stick to the pin and the other end moves back and forth &mdash; exactly how a steam locomotive&rsquo;s connecting rods work, but backwards. On a combine this stick is called the <strong>pitman arm</strong>.</p>
+        </div>
+        <div class="diagram-panel r">
+            <h4>Why not a spinning blade?</h4>
+            <p>A spinning blade has to go very fast to cut soft stems &mdash; think of a strimmer &mdash; and a fast blade is dangerous. A scissor action cuts soft cress <strong>slowly and gently</strong>, using plastic teeth. It is the safer design, and it&rsquo;s also what real combines use.</p>
+        </div>
+    </div>
+
+    <div class="callout">
+        <div class="callout-label">Stroke = pitch</div>
+        <p>The pin is 5&nbsp;mm from the centre, so the knife travels 10&nbsp;mm each way &mdash; exactly the gap between two teeth. Every knife tooth sweeps across one whole gap on every half-turn, so no stem can hide between teeth.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-06">
+    <div class="slide-number">06</div>
+    <h2>How a scissor cut works</h2>
+    <p>Scissors don&rsquo;t cut because they are sharp &mdash; they cut because two edges <strong>slide past each other while pressed together</strong>. Anything caught between them is pinched and sheared. That&rsquo;s why the knife and guard must lie flat against each other; if there&rsquo;s a gap, a soft stem just folds into it.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/shear_frames.svg" alt="Three frames showing the knife tooth trapping and shearing a cress stem against a guard tooth">
+        <figcaption class="photo-caption">Looking down on two blue guard teeth and one red knife tooth. The V-shaped gaps funnel each stem to the point where the edges cross.</figcaption>
+    </figure>
+
+    <div class="diagram-grid cols-3">
+        <div class="diagram-panel accent-border">
+            <h4>The V funnels</h4>
+            <p>Pointed teeth guide stems into the gaps as the machine moves forward, so each one is cut close to where the edges meet &mdash; the strongest part of the cut.</p>
+        </div>
+        <div class="diagram-panel g">
+            <h4>Flat and snug</h4>
+            <p>The mount plate overhangs the knife and holds it flat on the guard. Tight enough not to lift; loose enough to slide with a light push.</p>
+        </div>
+        <div class="diagram-panel y">
+            <h4>Guards stick out further</h4>
+            <p>Guard teeth are 15&nbsp;mm long, knife teeth only 12&nbsp;mm. The fixed guard always reaches further forward than the moving knife.</p>
+        </div>
+    </div>
+</section>
+
+<section class="slide" id="slide-07">
+    <div class="slide-number">07</div>
+    <h2>The numbers behind a clean cut</h2>
+    <p>There are only three numbers to understand. The rest is just building carefully.</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Number</th><th>Sum</th><th>With our design</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Cuts per second</strong></td><td>2 &times; (motor RPM &divide; 60) &mdash; one cut each way</td><td>2 &times; (300 &divide; 60) = <strong>10 cuts/s</strong></td></tr>
+                <tr><td><strong>Distance per cut</strong></td><td>push speed &divide; cuts per second</td><td>20 mm/s &divide; 10 = <strong>2 mm</strong></td></tr>
+                <tr><td><strong>Reel speed ratio</strong></td><td>reel radius &divide; wheel radius</td><td>25 &divide; 15 &asymp; <strong>1.7</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>The golden rule</h3>
+    <p>Between two cuts the machine should move forward <strong>less than half a tooth gap (5&nbsp;mm)</strong>. Then every stem is caught by a V before the next stem arrives, and nothing gets flattened.</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Distance per cut</th><th>What happens</th></tr></thead>
+            <tbody>
+                <tr><td><strong>&le; 5 mm</strong></td><td>Clean cut &mdash; every stem snipped</td></tr>
+                <tr><td><strong>5&ndash;10 mm</strong></td><td>Mostly cut &mdash; a few stems bend over</td></tr>
+                <tr><td><strong>&gt; 10 mm</strong></td><td>Pushing too fast &mdash; stems get flattened, not cut</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="callout g">
+        <div class="callout-label">So how fast do I push?</div>
+        <p>With a 300&nbsp;RPM motor the knife makes 10 cuts a second, so any push speed up to <strong>50&nbsp;mm a second</strong> keeps within the golden rule. A comfortable 20&nbsp;mm a second &mdash; a 20&nbsp;cm tray in 10 seconds &mdash; gives lots of margin.</p>
+    </div>
+</section>
+
+<section class="slide deck-only" id="slide-08">
+    <div class="slide-number">08</div>
+    <h2>Interactive &mdash; cutter-bar simulator</h2>
+    <p>Choose which N20 to buy, how fast to push, and whether the knife is held flat. Watch the stems (in slow motion) and see if they get cut or flattened. Try a slow 50&nbsp;RPM motor with a fast push &mdash; then fix it.</p>
+
+    <div class="control-panel">
+        <div class="control-row">
+            <label for="rpm">Motor speed</label>
+            <input type="range" id="rpm" min="50" max="600" value="300" step="25">
+            <span class="val" id="rpm-val">300 RPM</span>
+        </div>
+        <div class="control-row">
+            <label for="push">Push speed</label>
+            <input type="range" id="push" min="5" max="120" value="20" step="5">
+            <span class="val" id="push-val">20 mm/s</span>
+        </div>
+        <div class="control-row">
+            <label for="gap">Knife fit</label>
+            <select id="gap">
+                <option value="tight" selected>Held flat (plate overhang)</option>
+                <option value="loose">Loose &mdash; knife lifts off the guard</option>
+            </select>
+            <button class="btn secondary" id="sim-pause" type="button">Pause</button>
+        </div>
+    </div>
+
+    <div class="canvas-wrap">
+        <canvas id="sim" width="900" height="300" aria-label="Animated cutter bar cutting cress stems"></canvas>
+    </div>
+
+    <div class="metric-grid">
+        <div class="metric"><div class="metric-label">Cuts per second</div><div class="metric-value" id="m-cuts">&mdash;</div></div>
+        <div class="metric"><div class="metric-label">Knife speed</div><div class="metric-value" id="m-knife">&mdash;</div></div>
+        <div class="metric"><div class="metric-label">Distance per cut</div><div class="metric-value" id="m-adv">&mdash;</div></div>
+        <div class="metric"><div class="metric-label">20 cm tray takes</div><div class="metric-value" id="m-time">&mdash;</div></div>
+        <div class="metric"><div class="metric-label">Result</div><div class="metric-value verdict" id="m-verdict">&mdash;</div></div>
+    </div>
+
+    <div class="callout y">
+        <div class="callout-label">What the simulator shows</div>
+        <p>A slower motor gives fewer cuts a second, so you have to push more slowly. That&rsquo;s why the <a href="#slide-23">self-driving upgrade</a> uses a <em>very</em> slow drive motor. And no speed setting fixes a loose knife &mdash; the scissors must be snug.</p>
+    </div>
+
+    <script>
+    (function(){
+        function $(id){ return document.getElementById(id); }
+        var cv = $('sim'), ctx = cv.getContext('2d');
+        var W = 900, H = 300, dpr = Math.min(window.devicePixelRatio || 1, 2);
+        cv.width = W * dpr; cv.height = H * dpr; ctx.scale(dpr, dpr);
+        var PX = 4, PITCH = 10, STROKE = 10, SLOW = 0.25;   // 4 px per mm, slow motion x4
+        var BAR_Y = 205, GUARD_TIP = BAR_Y - 15 * PX, KNIFE_TIP = BAR_Y - 12 * PX;
+        var stems = [], t = 0, last = null, paused = false, spawn = 0;
+
+        function params(){ return { rpm: +$('rpm').value, v: +$('push').value, tight: $('gap').value === 'tight' }; }
+        function verdict(p){
+            var cps = 2 * p.rpm / 60, adv = p.v / cps;
+            if (!p.tight) return { col: '#E63946', txt: 'Stems fold into the gap', q: 0.85, adv: adv, cps: cps };
+            if (adv <= PITCH / 2) return { col: '#4CB050', txt: 'Clean cut', q: 0.02, adv: adv, cps: cps };
+            if (adv <= PITCH) return { col: '#FFB703', txt: 'Mostly cut', q: 0.3, adv: adv, cps: cps };
+            return { col: '#E63946', txt: 'Flattened', q: 0.8, adv: adv, cps: cps };
+        }
+        function update(){
+            var p = params(), v = verdict(p);
+            $('rpm-val').textContent = p.rpm + ' RPM';
+            $('push-val').textContent = p.v + ' mm/s';
+            $('m-cuts').textContent = v.cps.toFixed(1) + ' /s';
+            $('m-knife').textContent = Math.round(STROKE * v.cps) + ' mm/s';
+            $('m-adv').textContent = v.adv.toFixed(1) + ' mm';
+            $('m-time').textContent = (200 / p.v).toFixed(1) + ' s';
+            $('m-verdict').textContent = v.txt;
+            $('m-verdict').style.color = v.col;
+        }
+        function tri(x, base, tipY, half, fill, stroke){
+            ctx.beginPath(); ctx.moveTo(x - half, base); ctx.lineTo(x + half, base); ctx.lineTo(x, tipY); ctx.closePath();
+            ctx.fillStyle = fill; ctx.fill(); ctx.strokeStyle = stroke; ctx.lineWidth = 1.2; ctx.stroke();
+        }
+        function leaf(x, y, a, col){
+            ctx.save(); ctx.translate(x, y); ctx.rotate(a); ctx.fillStyle = col;
+            ctx.beginPath(); ctx.ellipse(-5, 0, 6, 3.4, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.beginPath(); ctx.ellipse(5, 0, 6, 3.4, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.restore();
+        }
+        function draw(p, v){
+            ctx.fillStyle = '#FBF8F0'; ctx.fillRect(0, 0, W, H);
+            ctx.fillStyle = '#EFE6CC'; ctx.fillRect(0, 0, W, BAR_Y);
+            // stubble behind the bar
+            ctx.fillStyle = '#E4D9BA'; ctx.fillRect(0, BAR_Y, W, H - BAR_Y);
+            // stems
+            stems.forEach(function(s){
+                if (s.state === 'standing') { ctx.fillStyle = '#3E8E41'; ctx.beginPath(); ctx.arc(s.x, s.y, 2.6, 0, 7); ctx.fill(); leaf(s.x, s.y - 1, s.a, '#6CC24A'); }
+                else if (s.state === 'cut') { ctx.globalAlpha = Math.max(0, 1 - s.age / 1.2); leaf(s.x, s.y, s.a + s.age * 3, '#6CC24A'); ctx.globalAlpha = 1; }
+                else { ctx.strokeStyle = '#C98A00'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(s.x, s.y); ctx.lineTo(s.x + 10, s.y + 16); ctx.stroke(); leaf(s.x + 10, s.y + 18, 0.6, '#B7C75A'); }
+            });
+            // guard (fixed)
+            ctx.fillStyle = '#4A9BE0'; ctx.fillRect(0, BAR_Y, W, 16 * PX * 0.55);
+            for (var gx = PITCH * PX / 2; gx < W + 40; gx += PITCH * PX) tri(gx, BAR_Y + 1, GUARD_TIP, 4 * PX, '#4A9BE0', '#0B5CAD');
+            // knife (moving)
+            var f = p.rpm / 60 * SLOW;
+            var off = (STROKE / 2) * Math.sin(2 * Math.PI * f * t) * PX;
+            var lift = p.tight ? 0 : 6;
+            ctx.globalAlpha = 0.82;
+            ctx.fillStyle = '#E63946'; ctx.fillRect(0, BAR_Y - lift, W, 6 * PX);
+            for (var kx = -PITCH * PX; kx < W + 40; kx += PITCH * PX) tri(kx + off, BAR_Y + 1 - lift, KNIFE_TIP - lift, 4.5 * PX, '#E63946', '#A61E2A');
+            ctx.globalAlpha = 1;
+            // labels
+            ctx.fillStyle = '#1B2A4A'; ctx.font = '600 13px Inter, "DejaVu Sans", sans-serif';
+            ctx.fillText('slow motion ×4  ·  cress moving toward the knife ↓', 14, 22);
+            ctx.fillStyle = v.col; ctx.font = '700 15px Inter, "DejaVu Sans", sans-serif';
+            ctx.fillText(v.txt, 14, H - 16);
+        }
+        function step(ts){
+            if (last === null) last = ts;
+            var dt = Math.min(0.05, (ts - last) / 1000); last = ts;
+            var p = params(), v = verdict(p);
+            if (!paused) {
+                t += dt;
+                var vy = p.v * SLOW * PX;                 // px per real second
+                spawn += 0.012 * W / PX * p.v * SLOW * dt; // density x width x speed
+                while (spawn >= 1 && stems.length < 500) {
+                    spawn -= 1;
+                    stems.push({ x: Math.random() * W, y: -6, a: Math.random() * 3, state: 'standing', age: 0 });
+                }
+                stems.forEach(function(s){
+                    if (s.state === 'standing') {
+                        s.y += vy * dt;
+                        if (s.y >= GUARD_TIP + 8) s.state = Math.random() < v.q ? 'bent' : 'cut';
+                    } else {
+                        s.age += dt;
+                        s.y += (s.state === 'cut' ? 60 : vy) * dt;
+                    }
+                });
+                stems = stems.filter(function(s){ return s.age < 1.4 && s.y < H + 20; });
+            }
+            draw(p, v);
+            requestAnimationFrame(step);
+        }
+        ['rpm', 'push', 'gap'].forEach(function(id){
+            $(id).addEventListener('input', update);
+            $(id).addEventListener('change', update);
+        });
+        $('sim-pause').addEventListener('click', function(){ paused = !paused; this.textContent = paused ? 'Play' : 'Pause'; });
+        update();
+        requestAnimationFrame(step);
+    })();
+    </script>
+</section>
+
+<!-- ============================================================ SHOPPING -->
+<section class="slide" id="slide-09">
+    <div class="slide-number">09</div>
+    <h2>Shopping list</h2>
+    <p>Prices are rough UK prices for small quantities from hobby-electronics shops or online marketplaces. Lots of the list is probably already in the kitchen drawer.</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Part</th><th>What to look for</th><th>Qty</th><th>About</th></tr></thead>
+            <tbody>
+                <tr><td><strong>N20 gear motor</strong></td><td>&ldquo;N20 gear motor 6 V 300 RPM&rdquo;, 3 mm D-shaft, ideally with wires already attached</td><td>1</td><td>&pound;4</td></tr>
+                <tr><td><strong>Battery box</strong></td><td>4 &times; AA holder with built-in ON/OFF switch and leads</td><td>1</td><td>&pound;2</td></tr>
+                <tr><td><strong>AA batteries</strong></td><td>Rechargeable NiMH, or alkaline (don&rsquo;t mix old and new)</td><td>4</td><td>&pound;5</td></tr>
+                <tr><td><strong>Push button</strong></td><td>Momentary, &ldquo;normally open&rdquo;, 12 mm panel type</td><td>1</td><td>&pound;1</td></tr>
+                <tr><td><strong>Resettable fuse</strong></td><td>PTC &ldquo;polyfuse&rdquo;, 500 mA hold current, radial leads</td><td>1</td><td>&pound;1</td></tr>
+                <tr><td><strong>Capacitor</strong></td><td>100 nF ceramic disc, marked &ldquo;104&rdquo;</td><td>1</td><td>20p</td></tr>
+                <tr><td><strong>Connectors</strong></td><td>Small lever connectors (no soldering needed) and hook-up wire</td><td>6</td><td>&pound;3</td></tr>
+                <tr><td><strong>Foam board</strong></td><td>A3 sheet, 5 mm thick</td><td>1</td><td>&pound;3</td></tr>
+                <tr><td><strong>Stiff plastic</strong></td><td>1 mm sheet, e.g. an old ring-binder cover or polypropylene sheet</td><td>A4</td><td>&pound;1</td></tr>
+                <tr><td><strong>Wooden strips</strong></td><td>10 &times; 10 mm square dowel for the rails, 450 mm long</td><td>2</td><td>&pound;2</td></tr>
+                <tr><td><strong>Lolly sticks</strong></td><td>Jumbo craft sticks</td><td>6</td><td>&pound;2</td></tr>
+                <tr><td><strong>Bamboo skewers</strong></td><td>3 mm, plus narrow straws they spin in freely</td><td>4</td><td>&pound;1</td></tr>
+                <tr><td><strong>Split pins</strong></td><td>Brass paper fasteners</td><td>6</td><td>&pound;2</td></tr>
+                <tr><td><strong>Bottle caps</strong></td><td>Four the same size, about 30 mm across</td><td>4</td><td>free</td></tr>
+                <tr><td><strong>Rubber bands, cable ties, masking tape</strong></td><td>Small band for the belt</td><td>&mdash;</td><td>free</td></tr>
+                <tr><td><strong>Shallow tray &amp; small tub</strong></td><td>Tray &le; 110 mm wide, 20&ndash;30 mm deep; tub about 90 &times; 50 mm</td><td>1 + 1</td><td>free</td></tr>
+                <tr><td><strong>Cress seeds &amp; kitchen paper</strong></td><td>One packet does several harvests</td><td>1</td><td>&pound;1.50</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="metric-grid">
+        <div class="metric"><div class="metric-label">Everything new</div><div class="metric-value">&asymp; &pound;28</div></div>
+        <div class="metric"><div class="metric-label">Using kitchen stuff</div><div class="metric-value">&asymp; &pound;20</div></div>
+        <div class="metric"><div class="metric-label">Most expensive</div><div class="metric-value">Batteries</div></div>
+    </div>
+</section>
+
+<section class="slide" id="slide-10">
+    <div class="slide-number">10</div>
+    <h2>Tools, and who does what</h2>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Tool</th><th>Used for</th><th>Who</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Craft knife, steel ruler, cutting mat</strong></td><td>Cutting foam board</td><td>Grown-up</td></tr>
+                <tr><td><strong>Low-temperature glue gun</strong></td><td>Almost every joint</td><td>Grown-up, or me with a grown-up right there</td></tr>
+                <tr><td><strong>Bradawl or thick needle</strong></td><td>Holes in bottle caps and plastic</td><td>Grown-up</td></tr>
+                <tr><td><strong>Strong scissors</strong></td><td>Cutting the plastic guard and knife</td><td>Me</td></tr>
+                <tr><td><strong>Pencil, fine pen, ruler, set square</strong></td><td>Marking out</td><td>Me</td></tr>
+                <tr><td><strong>Small screwdriver</strong></td><td>Lever connectors, battery box</td><td>Me</td></tr>
+                <tr><td><strong>Sandpaper (fine)</strong></td><td>Smoothing the knife edges</td><td>Me</td></tr>
+                <tr><td><strong>Soldering iron</strong> (optional)</td><td>Only if not using lever connectors</td><td>Grown-up</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="diagram-grid cols-2">
+        <div class="diagram-panel g">
+            <h4>A tidy workspace</h4>
+            <ul>
+                <li>Kitchen table covered with an old newspaper or board.</li>
+                <li>Glue gun on its stand, on a heat-proof mat.</li>
+                <li>A bowl of cold water nearby, just in case.</li>
+                <li>Parts kept in a shoebox between sessions.</li>
+            </ul>
+        </div>
+        <div class="diagram-panel y">
+            <h4>Session plan</h4>
+            <ul>
+                <li><strong>Day 0 (10 min):</strong> plant the cress.</li>
+                <li><strong>Afternoon 1:</strong> templates, chassis, wheels, cutter bar.</li>
+                <li><strong>Afternoon 2:</strong> motor, reel, wiring, ramp, tank.</li>
+                <li><strong>Day 7:</strong> first harvest and sandwiches.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide" id="slide-11">
+    <div class="slide-number">11</div>
+    <h2>Grow the cress first</h2>
+    <p>Cress takes about a week, so plant it <strong>before</strong> building &mdash; it will be ready when the machine is.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/growing.svg" alt="Timeline of cress growth from seeds on day 0 to harvest on day 7">
+        <figcaption class="photo-caption">From seed to harvest. Two days in the dark for strong, straight stems, then a bright windowsill to turn green.</figcaption>
+    </figure>
+
+    <ol class="steps">
+        <li><strong>Choose the tray.</strong> No wider than 110&nbsp;mm and about 20&ndash;30&nbsp;mm deep, washed in hot soapy water. A cut-down food container works.</li>
+        <li><strong>Build the bed.</strong> Fold kitchen paper into a thick pad so its top is about 5&nbsp;mm below the rim. Soak it, then pour away the extra water.</li>
+        <li><strong>Sow thickly and evenly.</strong> Sprinkle seeds so they nearly touch, <em>leaving the first 20&nbsp;mm at each end bare</em> so the cutter can start and stop on empty ground.</li>
+        <li><strong>Days 0&ndash;2: dark and damp.</strong> Cover with a plate or put in a cupboard. Mist with a spray bottle if the paper looks pale.</li>
+        <li><strong>Days 3&ndash;7: light.</strong> Uncover on a bright windowsill. Turn the tray every day &mdash; cress leans toward the light, and straight stems cut more cleanly.</li>
+        <li><strong>Harvest at 50&ndash;60&nbsp;mm tall</strong>, when the leaves are fully open and green.</li>
+    </ol>
+
+    <div class="callout g">
+        <div class="callout-label">Science bonus</div>
+        <p>Cress leaning toward the window is <strong>phototropism</strong>: the stem grows faster on its shady side, which bends it toward the light. Turning the tray every day keeps it straight &mdash; which our knife will like.</p>
+    </div>
+</section>
+
+<!-- ============================================================ BUILD -->
+<section class="slide" id="slide-12">
+    <div class="slide-number">12</div>
+    <h2>Cutting templates</h2>
+    <p>Every part with its size. Mark out with a sharp pencil and a ruler &mdash; don&rsquo;t trace a printout, because printers shrink pages.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/templates.svg" alt="Cutting templates for foam-board and plastic parts with dimensions">
+        <figcaption class="photo-caption">Foam-board parts on top (grown-up cuts), plastic cutter parts underneath (scissors). Holes marked with circles; the dashed box on plate D is where the motor sits.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Part</th><th>Material</th><th>Size</th><th>Notes</th></tr></thead>
+            <tbody>
+                <tr><td><strong>A</strong> Base plate</td><td>Foam board</td><td>140 &times; 100 mm</td><td>Battery box sits on top</td></tr>
+                <tr><td><strong>B</strong> Side plates &times; 2</td><td>Foam board</td><td>140 &times; 40 mm</td><td>Ø 5 mm straw holes 10 mm up, 35 &amp; 110 mm from the front</td></tr>
+                <tr><td><strong>C</strong> Header arms &times; 2</td><td>Foam board</td><td>110 &times; 20 mm</td><td>Ø 4 mm holes at 8 &amp; 18 mm (pins) and 96 mm (reel axle)</td></tr>
+                <tr><td><strong>D</strong> Cutter mount plate</td><td>Foam board</td><td>160 &times; 30 mm</td><td>Ø 5 mm shaft hole 147 mm from the left, 15 mm from the back</td></tr>
+                <tr><td><strong>E</strong> Ramp</td><td>Foam board or card</td><td>90 &times; 40 mm</td><td>Glued at about 25&deg;</td></tr>
+                <tr><td><strong>F</strong> Reel paddles &times; 4, hubs &times; 2</td><td>Stiff card</td><td>85 &times; 15 mm; Ø 20 mm</td><td>Paddle tips reach 25 mm from the axle</td></tr>
+                <tr><td><strong>G</strong> Guard comb + spacer</td><td>1 mm plastic</td><td>100 mm long</td><td>Base 16 mm, 10 teeth 15 mm long, 10 mm pitch; spacer strip 100 &times; 8 mm</td></tr>
+                <tr><td><strong>H</strong> Knife</td><td>1 mm plastic</td><td>112 mm long</td><td>Base 6 mm, 10 teeth 12 mm long; Ø 3 mm pin hole at the long end</td></tr>
+                <tr><td><strong>I</strong> Pitman arm</td><td>Lolly stick</td><td>45 mm</td><td>Ø 3 mm holes 35 mm apart</td></tr>
+                <tr><td><strong>J</strong> Crank</td><td>3 layers of plastic</td><td>Ø 20 mm</td><td>Centre hole for the shaft, pin hole exactly 5 mm off centre</td></tr>
+                <tr><td><strong>K</strong> Tank</td><td>Small plastic tub</td><td>&asymp; 90 &times; 50 mm</td><td>Front wall cut down to 8 mm</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="slide" id="slide-13">
+    <div class="slide-number">13</div>
+    <h2>Build 1 &mdash; Rails, chassis and wheels</h2>
+
+    <h3>The field</h3>
+    <ol class="steps">
+        <li><strong>Place the tray</strong> in the middle of a board (an old chopping board or a piece of foam board) about 450&nbsp;mm long.</li>
+        <li><strong>Glue a wooden rail on each side</strong>, tight against the tray walls, 120&nbsp;mm apart centre to centre. The rail tops must be <strong>level with the tray rim</strong>; pack underneath with card if needed. <span class="who">grown-up: glue</span></li>
+        <li><strong>Leave a run-up.</strong> The rails should stick out about 250&nbsp;mm past one end of the tray, so the machine can park off the crop.</li>
+    </ol>
+
+    <h3>The chassis</h3>
+    <ol class="steps" style="counter-reset: step 3;">
+        <li><strong>Cut parts A to E</strong> from foam board using the templates. <span class="who">grown-up: craft knife</span></li>
+        <li><strong>Make the bearings.</strong> Push a Ø&nbsp;5&nbsp;mm hole through each side plate at the marks. Glue a 12&nbsp;mm piece of straw into each hole. A skewer should spin in the straw freely without wobbling. <span class="who">grown-up: glue</span></li>
+        <li><strong>Glue the side plates under the base plate</strong>, flush with its two long edges, straw holes towards the bottom.</li>
+        <li><strong>Axles.</strong> Cut a 150&nbsp;mm skewer for the back axle and a 170&nbsp;mm one for the front. Slide them through the straws. The front axle sticks out 20&nbsp;mm more on the belt side.</li>
+        <li><strong>Wheels.</strong> Pierce the <em>exact</em> centre of four bottle caps. Push them onto the axles, open side facing in, so the wheel centres are 120&nbsp;mm apart, then glue. Wheels and axles turn together. <span class="who">grown-up: bradawl</span></li>
+        <li><strong>Rolling test.</strong> Put the chassis on the rails and give it a gentle push. It should roll 30&nbsp;cm in a straight line without rubbing. If it wanders, one wheel is off-centre &mdash; re-glue it.</li>
+        <li><strong>Handle.</strong> Glue two overlapping lolly sticks to the back edge at about 40&deg;, pointing up and back.</li>
+    </ol>
+
+    <div class="callout">
+        <div class="callout-label">Train link</div>
+        <p>If the wheels keep slipping off the rails, glue a thin card disc slightly bigger than the cap to the <em>inside</em> of each wheel. That&rsquo;s a <strong>flange</strong> &mdash; the same trick real trains use as a backup.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-14">
+    <div class="slide-number">14</div>
+    <h2>Build 2 &mdash; The cutter bar sandwich</h2>
+    <p>This is the most important part of the machine. Take your time: <strong>evenly spaced teeth and a flat, snug knife</strong> matter more than anything else.</p>
+
+    <ol class="steps">
+        <li><strong>Mark the teeth.</strong> On the plastic, draw the guard comb G (100&nbsp;mm long, 16&nbsp;mm base) and the knife H (112&nbsp;mm long, 6&nbsp;mm base). Mark a dot every 10&nbsp;mm along each edge with a fine pen.</li>
+        <li><strong>Cut the teeth.</strong> Snip each V from both sides with strong scissors: guard teeth 15&nbsp;mm long and 8&nbsp;mm wide at the root; knife teeth 12&nbsp;mm long and 9&nbsp;mm wide. Sand off any whiskers so the edges are crisp and straight.</li>
+        <li><strong>Pin hole.</strong> Make a Ø&nbsp;3&nbsp;mm hole in the knife, 5&nbsp;mm from the long end. <span class="who">grown-up: bradawl</span></li>
+        <li><strong>Spacer.</strong> Cut a 100&nbsp;&times;&nbsp;8&nbsp;mm strip of the same plastic, add one layer of masking tape on top, and glue it along the <em>back</em> 8&nbsp;mm of the guard base. The spacer is a hair thicker than the knife.</li>
+        <li><strong>Lay in the knife.</strong> Put the knife on the <em>front</em> half of the guard base, in front of the spacer, with its teeth lying over the guard teeth and the long end sticking out 12&nbsp;mm on the motor side.</li>
+        <li><strong>Close the sandwich.</strong> Glue mount plate D on top of the spacer, with its front edge level with the front of the guard base. The long end of D, with the shaft hole, goes on the same side as the knife&rsquo;s long end. The plate now overhangs the knife and holds it flat. Don&rsquo;t let any glue reach the knife. <span class="who">grown-up: glue</span></li>
+        <li><strong>Slide test.</strong> Push the knife end with a finger. It should slide the full 10&nbsp;mm with a light push, and must not lift or rattle.</li>
+    </ol>
+
+    <div class="diagram-grid cols-2">
+        <div class="diagram-panel r">
+            <h4>Too loose?</h4>
+            <p>If the knife lifts, glue two small <strong>hold-down</strong> strips of plastic under the front edge of the plate, one near each end, so they just touch the top of the knife.</p>
+        </div>
+        <div class="diagram-panel g">
+            <h4>Too stiff?</h4>
+            <p>Rub a candle over both plastic faces &mdash; wax is food-safe and slippery. Check no glue has squeezed into the slot.</p>
+        </div>
+    </div>
+</section>
+
+<section class="slide" id="slide-15">
+    <div class="slide-number">15</div>
+    <h2>Build 3 &mdash; Motor, crank and pitman arm</h2>
+
+    <ol class="steps">
+        <li><strong>Make the crank.</strong> Glue three Ø&nbsp;20&nbsp;mm discs of plastic together (or use a flat 20&nbsp;mm button). Make a snug centre hole for the 3&nbsp;mm shaft, and a second hole <strong>exactly 5&nbsp;mm from the centre</strong>. Measure twice &mdash; this sets the stroke. <span class="who">grown-up: bradawl</span></li>
+        <li><strong>Crank pin.</strong> Push a 12&nbsp;mm piece of skewer into the off-centre hole and glue it square.</li>
+        <li><strong>Fit the motor.</strong> From the top, push the N20&rsquo;s shaft down through the shaft hole in plate D until the gold gearbox sits flat. Glue the <em>gearbox</em> to the plate and add a cable tie around it. Keep glue off the shaft and the silver motor can. <span class="who">grown-up: glue</span></li>
+        <li><strong>Fit the crank</strong> onto the shaft underneath the plate, pin pointing down. Push it on hard, then add a small dab of glue on the flat side of the D-shaft. No glue near the gearbox.</li>
+        <li><strong>Pitman arm.</strong> Cut 45&nbsp;mm of lolly stick with two Ø&nbsp;3&nbsp;mm holes 35&nbsp;mm apart. Drop one hole over the crank pin, then glue a bead or a blob of glue onto the <em>tip</em> of the pin so the arm can&rsquo;t jump off. Don&rsquo;t glue the arm itself.</li>
+        <li><strong>Join the arm to the knife</strong> with a brass split pin through both holes. Open the legs gently so the joint swivels freely.</li>
+        <li><strong>Wiggle test.</strong> Push the knife slowly back and forth by hand. The arm should follow without catching on the plate. If the arm is lower than the knife, pack a small plastic washer under the joint.</li>
+    </ol>
+
+    <div class="callout y">
+        <div class="callout-label">Don&rsquo;t force the motor</div>
+        <p>A tiny gearbox can strip if you twist the shaft hard by hand. If something feels stiff, find what is rubbing rather than forcing it. The first powered test comes after the wiring.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-16">
+    <div class="slide-number">16</div>
+    <h2>Build 4 &mdash; Header arms, reel and belt</h2>
+
+    <h3>Attach the header</h3>
+    <ol class="steps">
+        <li><strong>Glue the cutter unit</strong> (plate D) across the lower front ends of the two header arms C, so the arms are just outside the 90&nbsp;mm cut width and the motor end hangs out beyond one arm. <span class="who">grown-up: glue</span></li>
+        <li><strong>Set the height with a gauge.</strong> Put the chassis on the rails over the tray. Stand a 15&nbsp;mm block of wood on the cress bed and rest the knife on it. Hold each arm against its side plate and mark through its two pin holes (at 8 and 18&nbsp;mm).</li>
+        <li><strong>Pin the arms.</strong> Pierce the marks and fit brass split pins through arm and side plate, both sides. Two pins per arm stop the header swinging.</li>
+    </ol>
+
+    <h3>Reel and belt</h3>
+    <ol class="steps" style="counter-reset: step 3;">
+        <li><strong>Build the reel.</strong> Slide two card hub discs onto a 130&nbsp;mm skewer, 88&nbsp;mm apart. Glue four 85&nbsp;&times;&nbsp;15&nbsp;mm paddles between them at 12, 3, 6 and 9 o&rsquo;clock. The paddle tips should be 25&nbsp;mm from the axle.</li>
+        <li><strong>Mount the reel</strong> through the front holes of both arms so the paddles pass about 5&nbsp;mm above the knife teeth and a little in front of them. The skewer sticks out 15&nbsp;mm on the belt side, opposite the motor.</li>
+        <li><strong>Make two equal pulleys.</strong> Wrap masking tape around the reel skewer end and the front-axle end until each is about 10&nbsp;mm across. They must be the same size.</li>
+        <li><strong>Fit the belt.</strong> Stretch a small rubber band between the two pulleys, not crossed. Push the machine forward by hand: the <em>bottom</em> paddles must move <em>backward</em>, towards the knife. If they go the wrong way, cross the band into a figure of eight.</li>
+    </ol>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/reel_ratio.svg" alt="Belt from the reel pulley to the front axle pulley, with the speed ratio worked out">
+        <figcaption class="photo-caption">Equal pulleys mean the reel turns once for every turn of the wheels. The reel is bigger than the wheel, so its paddle tips move about 1.7 times faster than the machine &mdash; just enough to lean the cress back onto the knife.</figcaption>
+    </figure>
+
+    <div class="callout">
+        <div class="callout-label">A built-in clutch</div>
+        <p>If the reel catches on something, the rubber band just slips. Nothing breaks, and the knife motor isn&rsquo;t affected.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-17">
+    <div class="slide-number">17</div>
+    <h2>Build 5 &mdash; Wiring</h2>
+    <p>The whole circuit is <strong>one loop</strong>: power leaves the battery on the red wire, passes through three safety parts and the motor, and comes back on the black wire.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/wiring.svg" alt="Wiring diagram: battery, fuse, switch, hold-to-run button, motor and capacitor">
+        <figcaption class="photo-caption">Red is the + side, black is the &minus; side. Numbers match the steps below. If the battery box has a built-in switch, that is part 2.</figcaption>
+    </figure>
+
+    <ol class="steps">
+        <li><strong>Batteries OUT</strong> of the box while wiring. Always.</li>
+        <li><strong>Capacitor.</strong> Connect the 100&nbsp;nF &ldquo;104&rdquo; capacitor across the two motor terminals (or across the two motor wires, close to the motor). It stops the motor crackling on radios and TVs. Either way round is fine. <span class="who">grown-up if soldering</span></li>
+        <li><strong>Fuse first.</strong> Connect the battery red wire to one leg of the resettable fuse with a lever connector.</li>
+        <li><strong>Switch, then button.</strong> From the fuse, run red wire to the ON/OFF switch (skip if it&rsquo;s built into the box), then to the hold-to-run button, then to the motor&rsquo;s red wire.</li>
+        <li><strong>Black wire</strong> from the battery straight to the motor&rsquo;s black wire.</li>
+        <li><strong>Tidy up.</strong> Hot-glue the button into a hole in the top of the handle. Tape the wires along the handle and chassis, and use cable ties to keep them well away from the crank.</li>
+        <li><strong>First spin.</strong> Lift the machine off the rails. Switch ON, then press the button for two seconds. The knife should blur side to side and stop the moment you let go. It doesn&rsquo;t matter which way the motor turns.</li>
+    </ol>
+
+    <div class="diagram-grid cols-3">
+        <div class="diagram-panel y">
+            <h4>1 &middot; Fuse</h4>
+            <p>If the knife jams, the motor draws more current. The PTC fuse warms up and <strong>switches itself off</strong>. It resets after cooling for a minute.</p>
+        </div>
+        <div class="diagram-panel">
+            <h4>2 &middot; ON/OFF switch</h4>
+            <p>The master switch. OFF whenever the machine isn&rsquo;t on the rails.</p>
+        </div>
+        <div class="diagram-panel r">
+            <h4>3 &middot; Hold-to-run</h4>
+            <p>Only runs while pressed. Let go and it stops &mdash; like a lawnmower&rsquo;s safety bar.</p>
+        </div>
+    </div>
+</section>
+
+<section class="slide" id="slide-18">
+    <div class="slide-number">18</div>
+    <h2>Build 6 &mdash; Ramp, tank and first harvest</h2>
+
+    <h3>Ramp and tank</h3>
+    <ol class="steps">
+        <li><strong>Cut the tank.</strong> Cut the front wall of a small plastic tub down to 8&nbsp;mm high, making a dustpan shape. <span class="who">grown-up: scissors or knife</span></li>
+        <li><strong>Fit the tank</strong> under the front of the base plate, just behind the cutter unit, with tape or a dab of glue. Its bottom must clear the cut stubble by at least 5&nbsp;mm.</li>
+        <li><strong>Fit the ramp.</strong> Glue ramp E from the back edge of plate D up to the low front wall of the tank, at about 25&deg;. A gentle slope matters: cress won&rsquo;t climb a steep one.</li>
+    </ol>
+
+    <h3>First harvest</h3>
+    <ol class="steps" style="counter-reset: step 3;">
+        <li><strong>Safety check</strong> with a grown-up, using the checklist on <a href="#slide-26">the safety plan</a>.</li>
+        <li><strong>Practice run</strong> on a spare tray of long grass, or a few cress stems, before the real crop.</li>
+        <li><strong>Park</strong> the machine on the run-up, knife just before the crop. Switch ON.</li>
+        <li><strong>Hold the button and push slowly</strong> &mdash; about 20&nbsp;mm a second, so a 20&nbsp;cm tray takes 10 seconds. Keep one steady speed.</li>
+        <li><strong>At the far end</strong>, let go of the button, switch OFF, and take the batteries out before touching anything near the knife.</li>
+        <li><strong>Empty the tank</strong> into a sieve, rinse the cress under the cold tap, and pat it dry.</li>
+    </ol>
+
+    <div class="callout g">
+        <div class="callout-label">Egg &amp; cress sandwiches (for 2)</div>
+        <p>Hard-boil 2 eggs (10 minutes), cool in cold water, peel and mash with a spoon of mayonnaise and a pinch of salt and pepper. Spread on buttered bread, scatter a big handful of freshly harvested cress on top, close, and cut into triangles. Farm to table in 15 minutes.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-19">
+    <div class="slide-number">19</div>
+    <h2>Troubleshooting</h2>
+    <p>Something not working is part of the project. Change <strong>one thing at a time</strong> and test again.</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>What you see</th><th>Why</th><th>What to do</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Nothing happens</strong></td><td>No power reaching the motor</td><td>Check batteries are in the right way, the switch is ON, the lever connectors are closed, and the fuse isn&rsquo;t still warm</td></tr>
+                <tr><td><strong>Motor hums, knife doesn&rsquo;t move</strong></td><td>Jammed or the sandwich is too tight</td><td>Batteries out, clear the jam, wax the knife, check the arm isn&rsquo;t rubbing the plate</td></tr>
+                <tr><td><strong>Stops, then works again a minute later</strong></td><td>The fuse is doing its job on a jam</td><td>Find the stiff spot; push more slowly through thick patches</td></tr>
+                <tr><td><strong>Stems bend over instead of cutting</strong></td><td>Knife lifting, or pushing too fast</td><td>Add hold-down strips; push more slowly; check knife teeth really overlap the guard teeth</td></tr>
+                <tr><td><strong>Ragged, torn cut</strong></td><td>Rounded or whiskery tooth edges</td><td>Recut the knife with sharp scissors; sand edges crisp; try the 3D-printed cutter (Upgrade 6)</td></tr>
+                <tr><td><strong>Crank arm jumps off</strong></td><td>Crank pin too short, or no stop on its tip</td><td>Longer pin with a bead glued on the tip</td></tr>
+                <tr><td><strong>Reel doesn&rsquo;t turn</strong></td><td>Belt slipping</td><td>Smaller rubber band; add another layer of tape to both pulleys</td></tr>
+                <tr><td><strong>Reel throws cress forward</strong></td><td>Reel turning the wrong way</td><td>Cross the belt into a figure of eight</td></tr>
+                <tr><td><strong>Cress piles up at the bottom of the ramp</strong></td><td>Ramp too steep or too far from the reel</td><td>Lower the ramp angle; move the reel back so paddles reach the ramp; or try the conveyor (Upgrade 7)</td></tr>
+                <tr><td><strong>Knife scrapes the paper</strong></td><td>Bed too high or lumpy</td><td>Flatten the bed; raise the header one row (Upgrade 1)</td></tr>
+                <tr><td><strong>Machine wanders off the rails</strong></td><td>Off-centre wheel, or axles not square</td><td>Re-centre wheels; add card flanges inside the wheels</td></tr>
+                <tr><td><strong>Radio or TV crackles</strong></td><td>Electrical noise from the motor brushes</td><td>Check the 100 nF capacitor is connected right at the motor</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ============================================================ UPGRADES -->
+<section class="slide" id="slide-20">
+    <div class="slide-number">20</div>
+    <h2>Upgrades &mdash; overview</h2>
+    <p>Once the basic machine works, here is how to make it better. Each upgrade is on its own page with its own steps. Do them in any order, one at a time, and test after each.</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>#</th><th>Upgrade</th><th>Difficulty</th><th>Extra cost</th><th>You learn about</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td><a href="#slide-21"><strong>Adjustable cutting height</strong></a></td><td>Easy</td><td>Free</td><td>Measuring, fits, gauges</td></tr>
+                <tr><td>2</td><td><a href="#slide-22"><strong>Speed dial</strong></a></td><td>Medium</td><td>&pound;3</td><td>PWM electronics</td></tr>
+                <tr><td>3</td><td><a href="#slide-23"><strong>Self-driving</strong></a></td><td>Medium</td><td>&pound;5</td><td>Gear ratios, speed</td></tr>
+                <tr><td>4</td><td><a href="#slide-23"><strong>Automatic end-of-row stop</strong></a></td><td>Medium</td><td>&pound;1</td><td>Safety interlocks</td></tr>
+                <tr><td>5</td><td><a href="#slide-24"><strong>Wider header</strong></a></td><td>Medium</td><td>&pound;1</td><td>Load, torque, scaling</td></tr>
+                <tr><td>6</td><td><a href="#slide-24"><strong>3D-printed cutter bar</strong></a></td><td>Advanced</td><td>Filament</td><td>CAD, tolerances</td></tr>
+                <tr><td>7</td><td><a href="#slide-25"><strong>Conveyor-belt feeder</strong></a></td><td>Advanced</td><td>Free</td><td>Belts, rollers, timing</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="callout y">
+        <div class="callout-label">The upgrade rule</div>
+        <p>Batteries out before changing anything. After every upgrade, run through the first-spin test and the safety checklist again before cutting cress.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-21">
+    <div class="slide-number">21</div>
+    <h2>Upgrade 1 &mdash; Adjustable cutting height</h2>
+    <p>Different crops need different heights. Small cress wants a low cut; a lumpy bed needs a higher one. Real combines let the driver raise and lower the header from the cab; ours uses three rows of pin holes.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/mod_height.svg" alt="Header arm pinned into one of three rows of holes in the chassis side plate, with a 15 mm gauge block under the knife">
+        <figcaption class="photo-caption">Two pins per arm keep the header level. Moving both pins up or down one row lifts or lowers the whole cutter by 5&nbsp;mm without tilting it.</figcaption>
+    </figure>
+
+    <ol class="steps">
+        <li><strong>Mark the rows.</strong> On each side plate, around the two existing pin holes, mark one extra pair of holes 5&nbsp;mm above and another 5&nbsp;mm below. That&rsquo;s three rows, two holes in each, 10&nbsp;mm apart.</li>
+        <li><strong>Make the holes</strong> Ø&nbsp;4&nbsp;mm. Put a small square of tape over the foam first so the holes don&rsquo;t tear. <span class="who">grown-up: bradawl</span></li>
+        <li><strong>Make gauge blocks</strong> 10, 15 and 20&nbsp;mm tall from scrap wood, or folded card, and write the size on each.</li>
+        <li><strong>To change height:</strong> batteries out, stand the gauge on the bed, pull both pins on each side, rest the knife on the gauge, and push the pins into the row that lines up. Use <strong>the same row on both sides</strong>.</li>
+        <li><strong>Check the ramp and reel</strong> still clear everything, then do a first-spin test.</li>
+    </ol>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Row</th><th>Cut height</th><th>Use when</th></tr></thead>
+            <tbody>
+                <tr><td>Low</td><td>10 mm</td><td>Young cress (day 5), shorter stems</td></tr>
+                <tr><td>Mid</td><td>15 mm</td><td>Normal harvest</td></tr>
+                <tr><td>High</td><td>20 mm</td><td>Lumpy bed, or the knife scrapes the paper</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="slide" id="slide-22">
+    <div class="slide-number">22</div>
+    <h2>Upgrade 2 &mdash; Speed dial</h2>
+    <p>A <strong>PWM speed controller</strong> is a little circuit board with a knob. It switches the power on and off hundreds of times a second. More &ldquo;on&rdquo; time means a faster motor. It lets you find the best knife speed by experiment, instead of buying different motors.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/mod_speed.svg" alt="Block wiring diagram with a PWM speed module between the fuse and switch and the hold-to-run button">
+        <figcaption class="photo-caption">The module goes after the fuse and switch. The hold-to-run button stays in the motor&rsquo;s red wire, so letting go still stops the knife instantly.</figcaption>
+    </figure>
+
+    <ol class="steps">
+        <li><strong>Buy</strong> a small &ldquo;PWM DC motor speed controller&rdquo; board with a knob. Check the listing says it works from <strong>6&nbsp;V or less</strong> and handles at least <strong>1&nbsp;A</strong>.</li>
+        <li><strong>Batteries out.</strong> Disconnect the red wire between the switch and the button.</li>
+        <li><strong>Input:</strong> red wire from the switch to <code>IN+</code>; a new black wire from the battery&rsquo;s black to <code>IN&minus;</code>.</li>
+        <li><strong>Output:</strong> <code>OUT+</code> to the hold-to-run button, and the button to the motor red. Motor black goes to <code>OUT&minus;</code> instead of straight to the battery.</li>
+        <li><strong>Mount</strong> the board on the base plate with sticky pads, knob towards the handle. Keep it dry: no cress water near it.</li>
+        <li><strong>Experiment.</strong> Start with the knob at halfway. Cut a test strip, then try faster and slower. Write down the slowest setting that still gives a clean cut.</li>
+    </ol>
+
+    <div class="callout y">
+        <div class="callout-label">Why not just go slow?</div>
+        <p>Turning the knob down lowers the knife&rsquo;s power as well as its speed, so at very slow settings a thick patch can stall it, and the fuse will trip. Fewer cuts a second also means you must push more slowly. Use the <a href="#slide-08">simulator</a> to see why.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-23">
+    <div class="slide-number">23</div>
+    <h2>Upgrades 3 &amp; 4 &mdash; Self-driving with automatic stop</h2>
+    <p>Pushing at a perfectly steady speed is hard. A second, <strong>very slow</strong> N20 on the back axle drives the machine along at exactly the same speed every time. The automatic stop switch makes sure it can never drive off the end.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/mod_drive.svg" alt="Rear axle driven by a slow N20 through a silicone tube, a microswitch end-stop at the front, and the wiring order">
+        <figcaption class="photo-caption">Left: the drive motor on the back axle and the end-stop switch at the front. Right: the order of parts along the red wire. Both motors sit after the hold-to-run button.</figcaption>
+    </figure>
+
+    <h3>Upgrade 3 &mdash; Drive motor</h3>
+    <ol class="steps">
+        <li><strong>Buy</strong> a second N20, <strong>6&nbsp;V, 15&nbsp;RPM</strong>, and 20&nbsp;mm of silicone tube with a 3&nbsp;mm hole.</li>
+        <li><strong>Work out the speed:</strong> wheel circumference = &pi; &times; 30&nbsp;mm &asymp; 94&nbsp;mm. 15 turns a minute &times; 94&nbsp;mm = 1,410&nbsp;mm a minute, or <strong>about 24&nbsp;mm a second</strong>. With 10 knife cuts a second, that&rsquo;s 2.4&nbsp;mm between cuts &mdash; well within the golden rule.</li>
+        <li><strong>Lengthen the back axle</strong> so it sticks out 15&nbsp;mm on one side. Push the silicone tube half onto the axle and half onto the motor shaft.</li>
+        <li><strong>Mount the motor</strong> on a foam-board block glued to the side plate, so the shaft lines up exactly with the axle. The tube soaks up small misalignment. <span class="who">grown-up: glue</span></li>
+        <li><strong>Wire it in parallel</strong> with the cutter motor: its red to the cutter motor&rsquo;s red, its black to the cutter motor&rsquo;s black &mdash; after the button. Add its own 100&nbsp;nF capacitor.</li>
+        <li><strong>Check the direction.</strong> Press the button with the machine lifted: the wheels must turn so it would drive <em>forward</em>. If not, swap the drive motor&rsquo;s two wires.</li>
+    </ol>
+
+    <h3>Upgrade 4 &mdash; End-of-row stop</h3>
+    <ol class="steps" style="counter-reset: step 6;">
+        <li><strong>Buy</strong> a lever microswitch with three terminals: C, NO and NC.</li>
+        <li><strong>Wire C and NC</strong> into the red wire, between the ON/OFF switch and the hold-to-run button. Not NO! NC means &ldquo;normally closed&rdquo;: power flows until the lever is pressed.</li>
+        <li><strong>Mount it</strong> at the front of the chassis above one rail, lever pointing forward and down. Glue a wooden <strong>end block</strong> on that rail just past the end of the tray.</li>
+        <li><strong>Test it before any cress:</strong> hold the button so both motors run, then press the lever with a finger. <strong>Everything must stop.</strong> If not, re-check you used NC.</li>
+    </ol>
+
+    <div class="callout g">
+        <div class="callout-label">A real safety interlock</div>
+        <p>This is the same idea as the switch that stops a lift moving while its doors are open. The machine is safe even if someone forgets to let go of the button.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-24">
+    <div class="slide-number">24</div>
+    <h2>Upgrades 5 &amp; 6 &mdash; Wider header and 3D-printed cutter</h2>
+
+    <h3>Upgrade 5 &mdash; Wider header</h3>
+    <p>For a wider tray, everything across the machine gets longer by the same amount. Keep the tooth pitch at 10&nbsp;mm and the stroke at 10&nbsp;mm.</p>
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Part</th><th>Standard</th><th>For a tray W mm wide</th></tr></thead>
+            <tbody>
+                <tr><td>Rail spacing (centres)</td><td>120 mm</td><td>W + 10 mm</td></tr>
+                <tr><td>Guard comb / number of teeth</td><td>100 mm / 10</td><td>W &minus; 10 mm / (W &minus; 10) &divide; 10</td></tr>
+                <tr><td>Knife</td><td>112 mm</td><td>guard + 12 mm</td></tr>
+                <tr><td>Plate D</td><td>160 mm</td><td>guard + 60 mm</td></tr>
+                <tr><td>Base plate, axles, reel paddles</td><td>100 / 150 / 85 mm</td><td>each + (W &minus; 110) mm</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <ol class="steps">
+        <li><strong>Mind the load.</strong> Every extra tooth adds rubbing, so the fuse will trip sooner. Up to about 150&nbsp;mm wide, the 300&nbsp;RPM motor should cope; test by running with no crop and feeling if the motor gets warm.</li>
+        <li><strong>Wider than 150&nbsp;mm?</strong> Either build <strong>two cutter units</strong>, one from each side, each with its own motor and knife meeting in the middle, or use a stronger <strong>100&nbsp;RPM</strong> N20 (about three times the turning force).</li>
+        <li><strong>With a 100&nbsp;RPM motor</strong> there are only 3.3 cuts a second, so the golden rule limits you to <strong>16&nbsp;mm a second</strong> push speed.</li>
+    </ol>
+
+    <h3>Upgrade 6 &mdash; 3D-printed cutter bar</h3>
+    <p>If there&rsquo;s a 3D printer available (like the Ender-3 used for the PlaneForge aircraft), printed parts are straighter and more even than hand-cut plastic &mdash; and a better cut comes from perfectly spaced teeth.</p>
+    <ol class="steps" style="counter-reset: step 3;">
+        <li><strong>Design</strong> in Tinkercad (free, in a web browser): guard comb, knife, and a cutter body that includes the spacer and the hold-down lip in one piece.</li>
+        <li><strong>Sizes:</strong> knife 1.0&nbsp;mm thick; slot for it 1.3&nbsp;mm; guard 1.2&nbsp;mm; same teeth as the templates.</li>
+        <li><strong>Crank with a D-hole:</strong> the N20 shaft is 3&nbsp;mm with a flat at 2.5&nbsp;mm. Print a test hole first, then adjust by 0.1&nbsp;mm until it pushes on snugly without glue.</li>
+        <li><strong>Print</strong> flat on the bed in <strong>PETG</strong> (tougher and slipperier than PLA), 100% infill, 0.2&nbsp;mm layers. Clean the first-layer &ldquo;elephant&rsquo;s foot&rdquo; off the knife edges with fine sandpaper.</li>
+        <li><strong>Swap it in</strong> using the same motor, arm and split pin, then re-check the slide test.</li>
+    </ol>
+</section>
+
+<section class="slide" id="slide-25">
+    <div class="slide-number">25</div>
+    <h2>Upgrade 7 &mdash; Conveyor-belt feeder</h2>
+    <p>Real combines don&rsquo;t rely on a slope &mdash; they use a <strong>conveyor</strong> (the feeder house) to carry the crop up. Replacing the ramp with a small moving belt means cress never piles up at the bottom.</p>
+
+    <div class="diagram-grid cols-2">
+        <div class="diagram-panel y">
+            <h4>What it is</h4>
+            <p>A loop of 20&nbsp;mm ribbon or a cut-open rubber glove cuff, running over two skewer rollers: one just behind the knife, one above the tank&rsquo;s low front wall. Matchstick cleats glued across it every 15&nbsp;mm grab the cress.</p>
+        </div>
+        <div class="diagram-panel p">
+            <h4>What drives it</h4>
+            <p>A second small rubber band from the reel&rsquo;s axle to the top roller. Like the reel, it only moves when the machine moves &mdash; so it needs no extra motor or wiring.</p>
+        </div>
+    </div>
+
+    <ol class="steps">
+        <li><strong>Remove the ramp</strong> (a warm butter knife run under hot glue releases it). <span class="who">grown-up</span></li>
+        <li><strong>Rollers.</strong> Cut two 100&nbsp;mm skewers. Wrap each with tape to 8&nbsp;mm across in the middle, so the belt tracks centrally.</li>
+        <li><strong>Bearings.</strong> Glue short straws to the insides of the header arms: bottom roller just behind plate D, top roller above the tank lip. The belt should slope at about 30&deg;.</li>
+        <li><strong>Belt.</strong> Loop the ribbon around both rollers and join the ends with a strip of tape on the <em>outside</em>, slightly tight. Glue on matchstick cleats every 15&nbsp;mm.</li>
+        <li><strong>Drive.</strong> Make a tape pulley on the reel axle (outside the arm) and another on the top roller, and join them with a small rubber band.</li>
+        <li><strong>Direction check:</strong> push the machine forward by hand. The <em>top</em> of the belt must move <em>up and back</em> towards the tank. If not, cross the band.</li>
+    </ol>
+
+    <div class="callout">
+        <div class="callout-label">Keep fingers clear</div>
+        <p>The conveyor has no motor of its own and stops when the machine stops, but rollers can still pinch. The batteries-out rule applies before clearing it.</p>
+    </div>
+</section>
+
+<!-- ============================================================ SAFETY + CLOSE -->
+<section class="slide" id="slide-26">
+    <div class="slide-number">26</div>
+    <h2>The safety plan</h2>
+    <p>For Mum: every risk we could think of, and what we do about each one.</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Risk</th><th>What we do about it</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Craft-knife cuts</strong></td><td>A grown-up does all knife cutting on a mat with a steel ruler; the blade is retracted and put away straight after.</td></tr>
+                <tr><td><strong>Hot-glue burns</strong></td><td>Low-temperature glue gun, used by or right next to a grown-up; kept on its stand; bowl of cold water nearby.</td></tr>
+                <tr><td><strong>Fingers in the cutter</strong></td><td>Plastic teeth, not metal; scissor action, not a spinning blade; hold-to-run button; guards stick out further than the knife; <strong>batteries out before hands go near the knife</strong>.</td></tr>
+                <tr><td><strong>Electric shock</strong></td><td>Not possible: 6 V from AA batteries is far too low to be felt. No mains electricity anywhere in the project.</td></tr>
+                <tr><td><strong>Battery short circuit</strong></td><td>Batteries live in a proper box; the fuse is the first thing after the battery; batteries out while wiring and when the machine is put away.</td></tr>
+                <tr><td><strong>Motor jam or overheating</strong></td><td>Self-resetting 500 mA fuse; let go of the button if it stalls; the belt slips instead of breaking.</td></tr>
+                <tr><td><strong>Small parts</strong></td><td>Split pins, beads and caps kept in a closed box, away from younger children and pets.</td></tr>
+                <tr><td><strong>Food hygiene</strong></td><td>Washed tray; clean hands; only candle wax as a lubricant; electrics above and behind the crop; cress rinsed before eating; any cress touched by glue thrown away.</td></tr>
+                <tr><td><strong>Water and mess</strong></td><td>Tray on a board with a tea towel underneath; misting bottle instead of a jug; electronics kept dry.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="diagram-grid cols-2">
+        <div class="diagram-panel r">
+            <h4>Rules card (stick it on the handle)</h4>
+            <ol>
+                <li><strong>Batteries OUT</strong> before fingers go near the knife.</li>
+                <li>Only press the button when the machine is <strong>on the rails</strong>.</li>
+                <li><strong>Both hands on the handle</strong> while it runs.</li>
+                <li>Grown-ups do <strong>knives and hot glue</strong>.</li>
+                <li>Smells hot or stops? <strong>Let go, switch OFF, batteries out.</strong></li>
+            </ol>
+        </div>
+        <div class="diagram-panel g">
+            <h4>Before every run &mdash; checklist</h4>
+            <ul>
+                <li>&#9744; Knife slides freely, no cracked teeth</li>
+                <li>&#9744; Crank pin has its stop on the tip</li>
+                <li>&#9744; Wires tied clear of the crank and wheels</li>
+                <li>&#9744; Button stops the knife the moment it&rsquo;s released</li>
+                <li>&#9744; End-stop switch tested (if fitted)</li>
+                <li>&#9744; Tray on its board, towel underneath</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide" id="slide-27">
+    <div class="slide-number">27</div>
+    <h2>What I&rsquo;ll learn</h2>
+    <p>This isn&rsquo;t just a toy. Nearly every school science and maths topic turns up somewhere in it.</p>
+
+    <div class="diagram-grid cols-2">
+        <div class="diagram-panel g">
+            <h4>Biology</h4>
+            <p>How seeds germinate, why seedlings grown in the dark are tall and pale, phototropism, and where food actually comes from.</p>
+        </div>
+        <div class="diagram-panel accent-border">
+            <h4>Maths</h4>
+            <p>Measuring to the millimetre, ratios (25&nbsp;&divide;&nbsp;15), speeds and rates (cuts per second), circumference (&pi;&nbsp;&times;&nbsp;diameter), and working out a budget.</p>
+        </div>
+        <div class="diagram-panel y">
+            <h4>Physics &amp; engineering</h4>
+            <p>Turning rotation into sliding with a crank; gearboxes trading speed for force; how shearing works; electric circuits, fuses and switches; testing and fixing.</p>
+        </div>
+        <div class="diagram-panel r">
+            <h4>Life skills</h4>
+            <p>Following a plan, working safely, being patient for a week, fixing things that don&rsquo;t work first time &mdash; and making lunch for the family.</p>
+        </div>
+    </div>
+
+    <div class="quote">
+        The engineering design process: imagine, plan, build, test, improve.
+        <span class="attr">&mdash; this project does all five, then the upgrades do them again</span>
+    </div>
+</section>
+
+<section class="slide" id="slide-28">
+    <div class="slide-number">28</div>
+    <h2>Jargon buster</h2>
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Word</th><th>What it means</th></tr></thead>
+            <tbody>
+                <tr><td><strong>N20 motor</strong></td><td>A standard tiny electric motor (12 &times; 10 mm) sold with a gearbox attached</td></tr>
+                <tr><td><strong>RPM</strong></td><td>Revolutions per minute &mdash; how many whole turns the shaft makes each minute</td></tr>
+                <tr><td><strong>Gearbox</strong></td><td>Gears that make the output slower but stronger</td></tr>
+                <tr><td><strong>D-shaft</strong></td><td>A motor shaft with one flat side, so things fixed to it can&rsquo;t slip round</td></tr>
+                <tr><td><strong>Torque</strong></td><td>Turning force &mdash; how hard the motor can twist</td></tr>
+                <tr><td><strong>Stall</strong></td><td>When the motor is stuck and can&rsquo;t turn; it then draws the most current</td></tr>
+                <tr><td><strong>Crank</strong></td><td>A disc or arm with a pin off-centre, turning round and round</td></tr>
+                <tr><td><strong>Pitman arm</strong></td><td>The rod that turns the crank&rsquo;s circling into the knife&rsquo;s back-and-forth</td></tr>
+                <tr><td><strong>Reciprocating</strong></td><td>Moving back and forth in a straight line</td></tr>
+                <tr><td><strong>Stroke</strong></td><td>How far the knife travels each way (10 mm)</td></tr>
+                <tr><td><strong>Pitch</strong></td><td>The distance from one tooth to the next (10 mm)</td></tr>
+                <tr><td><strong>Header</strong></td><td>The whole front of a combine: reel, cutter bar and feeder</td></tr>
+                <tr><td><strong>Shear</strong></td><td>Cutting by sliding two edges past each other, like scissors</td></tr>
+                <tr><td><strong>PTC fuse</strong></td><td>A fuse that turns itself off when too much current flows, then resets when it cools</td></tr>
+                <tr><td><strong>Capacitor</strong></td><td>A tiny part that soaks up electrical crackle from the motor</td></tr>
+                <tr><td><strong>PWM</strong></td><td>Pulse-width modulation: switching power on and off very fast to control speed</td></tr>
+                <tr><td><strong>NC / NO</strong></td><td>Normally closed / normally open &mdash; whether a switch lets power through before you press it</td></tr>
+                <tr><td><strong>In parallel</strong></td><td>Two parts wired side by side so each gets the full battery voltage</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="slide" id="slide-29">
+    <div class="slide-number">29</div>
+    <h2>Cheat sheet &mdash; so, Mum&hellip;?</h2>
+    <ul>
+        <li><strong>What:</strong> a cress combine harvester, about 24 cm long, rolling on rails beside a shallow tray of home-grown cress.</li>
+        <li><strong>How it cuts:</strong> a 6 V, 300 RPM <strong>N20 gear motor</strong> turns a crank; a pitman arm slides a plastic knife 10 mm over a plastic guard comb &mdash; <strong>10 scissor cuts a second</strong>.</li>
+        <li><strong>How it collects:</strong> a wheel-driven reel sweeps cress onto the knife; a gentle ramp leads into a dustpan-shaped tank.</li>
+        <li><strong>The golden rule:</strong> move less than 5 mm between cuts &mdash; push at about 20 mm a second.</li>
+        <li><strong>Safety:</strong> 6 V batteries, plastic knife, fuse &rarr; switch &rarr; hold-to-run button, grown-up does knives and glue, batteries out before touching the cutter.</li>
+        <li><strong>Cost and time:</strong> about &pound;20, two afternoons of building, one week of growing.</li>
+        <li><strong>Upgrades:</strong> adjustable height, speed dial, self-driving with an automatic stop, wider header, 3D-printed cutter, conveyor feeder.</li>
+    </ul>
+
+    <div class="callout g">
+        <div class="callout-label">So, Mum&hellip; can we?</div>
+        <p>It&rsquo;s safe, cheap, tidy and planned down to the last millimetre. I&rsquo;ll learn about plants, maths, machines and circuits &mdash; and at the end of the week, you get an egg &amp; cress sandwich made from a crop I grew and harvested with a machine I built. Everything is also in the <a href="Cress_Farming.pdf">PDF report</a>, so you can read it properly first.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>Cress Farming &mdash; build a cress combine harvester. <a href="Cress_Farming.pdf">PDF report</a> &middot; source on <a href="https://github.com/BrendanJamesLynskey/Cress_Farming">GitHub</a> &middot; indexed from the <a href="https://github.com/BrendanJamesLynskey/JW">project hub</a>.</p>
+</footer>
+
+</body>
+</html>

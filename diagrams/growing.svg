@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="Inter, 'DejaVu Sans', Arial, sans-serif" role="img" aria-label="Growing cress: day-by-day timeline">
+<title>Growing cress: day-by-day timeline</title>
+<defs></defs>
+<rect x="1.0" y="1.0" width="898.0" height="298.0" rx="14" fill="#FBF8F0" stroke="#DDD5C2" stroke-width="2" opacity="1"/>
+<rect x="40.0" y="60.0" width="290.0" height="8.0" rx="4" fill="#374151" stroke="none" stroke-width="1.5" opacity="1"/>
+<text x="185.0" y="50.0" font-size="12.5" font-weight="700" fill="#1B2A4A" text-anchor="middle">dark + damp (cover with a plate)</text>
+<rect x="330.0" y="60.0" width="530.0" height="8.0" rx="4" fill="#FFB703" stroke="none" stroke-width="1.5" opacity="1"/>
+<text x="595.0" y="50.0" font-size="12.5" font-weight="700" fill="#1B2A4A" text-anchor="middle">bright windowsill, keep the paper damp</text>
+<rect x="45.0" y="196.0" width="110.0" height="18.0" rx="0" fill="#EFE6CC" stroke="#D8CBA6" stroke-width="1.5" opacity="1"/>
+<circle cx="58.0" cy="194.0" r="2.8" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="72.0" cy="194.0" r="2.8" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="86.0" cy="194.0" r="2.8" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="100.0" cy="194.0" r="2.8" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="114.0" cy="194.0" r="2.8" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="128.0" cy="194.0" r="2.8" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="142.0" cy="194.0" r="2.8" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<text x="100.0" y="240.0" font-size="15" font-weight="700" fill="#1B2A4A" text-anchor="middle">Day 0</text>
+<text x="100.0" y="258.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">sprinkle seeds on</text>
+<text x="100.0" y="274.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">damp paper</text>
+<rect x="185.0" y="196.0" width="110.0" height="18.0" rx="0" fill="#EFE6CC" stroke="#D8CBA6" stroke-width="1.5" opacity="1"/>
+<circle cx="198.0" cy="193.0" r="5.0" fill="#E0F2F1" stroke="none" stroke-width="1.5" opacity="0.9"/>
+<circle cx="198.0" cy="193.0" r="3.2" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="212.0" cy="193.0" r="5.0" fill="#E0F2F1" stroke="none" stroke-width="1.5" opacity="0.9"/>
+<circle cx="212.0" cy="193.0" r="3.2" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="226.0" cy="193.0" r="5.0" fill="#E0F2F1" stroke="none" stroke-width="1.5" opacity="0.9"/>
+<circle cx="226.0" cy="193.0" r="3.2" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="240.0" cy="193.0" r="5.0" fill="#E0F2F1" stroke="none" stroke-width="1.5" opacity="0.9"/>
+<circle cx="240.0" cy="193.0" r="3.2" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="254.0" cy="193.0" r="5.0" fill="#E0F2F1" stroke="none" stroke-width="1.5" opacity="0.9"/>
+<circle cx="254.0" cy="193.0" r="3.2" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="268.0" cy="193.0" r="5.0" fill="#E0F2F1" stroke="none" stroke-width="1.5" opacity="0.9"/>
+<circle cx="268.0" cy="193.0" r="3.2" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="282.0" cy="193.0" r="5.0" fill="#E0F2F1" stroke="none" stroke-width="1.5" opacity="0.9"/>
+<circle cx="282.0" cy="193.0" r="3.2" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<text x="240.0" y="240.0" font-size="15" font-weight="700" fill="#1B2A4A" text-anchor="middle">Day 1</text>
+<text x="240.0" y="258.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">seeds swell,</text>
+<text x="240.0" y="274.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">jelly coat</text>
+<rect x="325.0" y="196.0" width="110.0" height="18.0" rx="0" fill="#EFE6CC" stroke="#D8CBA6" stroke-width="1.5" opacity="1"/>
+<circle cx="338.0" cy="193.0" r="3.0" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<path d="M338,193 q4,-6 2,-12" stroke="#F5F5F4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M338,195 q-3,6 1,10" stroke="#F5F5F4" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="352.0" cy="193.0" r="3.0" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<path d="M352,193 q4,-6 2,-12" stroke="#F5F5F4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M352,195 q-3,6 1,10" stroke="#F5F5F4" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="366.0" cy="193.0" r="3.0" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<path d="M366,193 q4,-6 2,-12" stroke="#F5F5F4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M366,195 q-3,6 1,10" stroke="#F5F5F4" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="380.0" cy="193.0" r="3.0" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<path d="M380,193 q4,-6 2,-12" stroke="#F5F5F4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M380,195 q-3,6 1,10" stroke="#F5F5F4" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="394.0" cy="193.0" r="3.0" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<path d="M394,193 q4,-6 2,-12" stroke="#F5F5F4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M394,195 q-3,6 1,10" stroke="#F5F5F4" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="408.0" cy="193.0" r="3.0" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<path d="M408,193 q4,-6 2,-12" stroke="#F5F5F4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M408,195 q-3,6 1,10" stroke="#F5F5F4" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="422.0" cy="193.0" r="3.0" fill="#8B4513" stroke="none" stroke-width="1.5" opacity="1"/>
+<path d="M422,193 q4,-6 2,-12" stroke="#F5F5F4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M422,195 q-3,6 1,10" stroke="#F5F5F4" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text x="380.0" y="240.0" font-size="15" font-weight="700" fill="#1B2A4A" text-anchor="middle">Day 2</text>
+<text x="380.0" y="258.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">tiny white roots</text>
+<text x="380.0" y="274.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">cover: keep dark</text>
+<rect x="465.0" y="196.0" width="110.0" height="18.0" rx="0" fill="#EFE6CC" stroke="#D8CBA6" stroke-width="1.5" opacity="1"/>
+<path d="M478,196 q-2,-14 4,-18 q5,-2 4,4" stroke="#C7D98A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M492,196 q-2,-14 4,-18 q5,-2 4,4" stroke="#C7D98A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M506,196 q-2,-14 4,-18 q5,-2 4,4" stroke="#C7D98A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M520,196 q-2,-14 4,-18 q5,-2 4,4" stroke="#C7D98A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M534,196 q-2,-14 4,-18 q5,-2 4,4" stroke="#C7D98A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M548,196 q-2,-14 4,-18 q5,-2 4,4" stroke="#C7D98A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M562,196 q-2,-14 4,-18 q5,-2 4,4" stroke="#C7D98A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text x="520.0" y="240.0" font-size="15" font-weight="700" fill="#1B2A4A" text-anchor="middle">Day 3</text>
+<text x="520.0" y="258.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">hooks up, pale</text>
+<text x="520.0" y="274.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">move to window</text>
+<rect x="605.0" y="196.0" width="110.0" height="18.0" rx="0" fill="#EFE6CC" stroke="#D8CBA6" stroke-width="1.5" opacity="1"/>
+<path d="M618.0,196.0 Q617.8,167.0 617.7,138.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="613.1" cy="134.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-145.3 613.1 134.8)"/>
+<ellipse cx="622.3" cy="134.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-35.3 622.3 134.8)"/>
+<path d="M632.0,196.0 Q632.3,167.0 632.4,138.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="627.8" cy="134.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-144.6 627.8 134.8)"/>
+<ellipse cx="637.0" cy="134.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-34.6 637.0 134.8)"/>
+<path d="M646.0,196.0 Q647.9,167.0 648.5,138.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="644.1" cy="134.6" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-142.5 644.1 134.6)"/>
+<ellipse cx="653.3" cy="135.0" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-32.5 653.3 135.0)"/>
+<path d="M660.0,196.0 Q659.8,167.0 659.8,138.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="655.2" cy="134.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-145.2 655.2 134.8)"/>
+<ellipse cx="664.4" cy="134.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-35.2 664.4 134.8)"/>
+<path d="M674.0,196.0 Q674.0,167.0 674.0,138.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="669.5" cy="134.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-145.0 669.5 134.8)"/>
+<ellipse cx="678.6" cy="134.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-35.0 678.6 134.8)"/>
+<path d="M688.0,196.0 Q688.4,167.0 688.5,138.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="684.0" cy="134.7" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-144.5 684.0 134.7)"/>
+<ellipse cx="693.1" cy="134.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-34.5 693.1 134.8)"/>
+<path d="M702.0,196.0 Q700.6,167.0 700.1,138.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="695.4" cy="134.9" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-146.9 695.4 134.9)"/>
+<ellipse cx="704.6" cy="134.6" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-36.9 704.6 134.6)"/>
+<text x="660.0" y="240.0" font-size="15" font-weight="700" fill="#1B2A4A" text-anchor="middle">Day 5</text>
+<text x="660.0" y="258.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">green, 30 mm</text>
+<text x="660.0" y="274.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">turn tray daily</text>
+<rect x="745.0" y="196.0" width="110.0" height="18.0" rx="0" fill="#EFE6CC" stroke="#D8CBA6" stroke-width="1.5" opacity="1"/>
+<path d="M758.0,196.0 Q758.1,145.0 758.1,94.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="753.5" cy="90.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-145.0 753.5 90.8)"/>
+<ellipse cx="762.7" cy="90.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-35.0 762.7 90.8)"/>
+<path d="M772.0,196.0 Q772.6,145.0 772.8,94.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="768.2" cy="90.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-144.6 768.2 90.8)"/>
+<ellipse cx="777.4" cy="90.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-34.6 777.4 90.8)"/>
+<path d="M786.0,196.0 Q787.3,145.0 787.8,94.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="783.2" cy="90.7" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-144.0 783.2 90.7)"/>
+<ellipse cx="792.4" cy="90.9" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-34.0 792.4 90.9)"/>
+<path d="M800.0,196.0 Q798.2,145.0 797.6,94.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="792.9" cy="90.9" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-146.4 792.9 90.9)"/>
+<ellipse cx="802.1" cy="90.7" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-36.4 802.1 90.7)"/>
+<path d="M814.0,196.0 Q813.1,145.0 812.8,94.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="808.2" cy="90.8" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-145.7 808.2 90.8)"/>
+<ellipse cx="817.4" cy="90.7" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-35.7 817.4 90.7)"/>
+<path d="M828.0,196.0 Q826.2,145.0 825.5,94.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="820.9" cy="90.9" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-146.4 820.9 90.9)"/>
+<ellipse cx="830.1" cy="90.7" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-36.4 830.1 90.7)"/>
+<path d="M842.0,196.0 Q843.4,145.0 843.9,94.0" stroke="#3E8E41" stroke-width="1.7600000000000002" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="839.3" cy="90.7" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-144.0 839.3 90.7)"/>
+<ellipse cx="848.5" cy="90.9" rx="6.0" ry="3.3600000000000003" fill="#6CC24A" stroke="none" stroke-width="1" transform="rotate(-34.0 848.5 90.9)"/>
+<text x="800.0" y="240.0" font-size="15" font-weight="700" fill="#1F776C" text-anchor="middle">Day 7</text>
+<text x="800.0" y="258.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">50–60 mm</text>
+<text x="800.0" y="274.0" font-size="12" font-weight="400" fill="#A61E2A" text-anchor="middle">HARVEST!</text>
+</svg>

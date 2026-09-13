@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cress Farming &mdash; Report</title>
+<style>
+/* Print styling for the PDF report. Palette follows the Matrix Methods PDF reports:
+   navy headings and table bars, pale grey callouts, DejaVu Sans throughout. */
+@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+:root { --navy: #1A3A5F; --ink: #111418; --muted: #5A6673; --pale: #F2F4F7; --edge: #C3CBD6; --rule: #B9C2CE;
+        --green: #2E7D32; --red: #C0392B; --amber: #B7791F; --teal: #1F776C; --purple: #8E1A7E; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: 'DejaVu Sans', Arial, sans-serif; font-size: 9.6pt; line-height: 1.5; color: var(--ink); }
+a { color: var(--navy); text-decoration: none; }
+
+/* Title page */
+.title-page { height: 255mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+.title-page .kicker { font-size: 10pt; letter-spacing: .18em; text-transform: uppercase; color: var(--green); font-weight: bold; }
+.title-page h1 { font-size: 40pt; color: var(--navy); margin: 4mm 0 2mm; line-height: 1.05; }
+.title-page .sub { font-size: 13pt; color: var(--muted); max-width: 150mm; margin: 0 0 8mm; }
+.title-page img { width: 100%; border-radius: 3mm; }
+.title-page .meta { margin-top: 8mm; font-size: 9.5pt; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 3mm; }
+
+/* Front matter */
+.front { page-break-after: always; }
+h1.section { font-size: 20pt; color: var(--navy); margin: 0 0 4mm; padding-bottom: 2mm; border-bottom: 2px solid var(--navy); }
+.toc { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 10mm; }
+.toc li { padding: 1.1mm 0; border-bottom: 1px dotted var(--rule); break-inside: avoid; font-size: 9.5pt; }
+.toc .n { display: inline-block; width: 8mm; color: var(--green); font-weight: bold; }
+
+/* Chapters built from the deck slides */
+.chapter { margin: 0 0 7mm; }
+.chapter.new-page { page-break-before: always; }
+.part-title { page-break-before: always; font-size: 22pt; color: var(--green); margin: 0 0 5mm; padding-bottom: 2mm; border-bottom: 2px solid var(--green); }
+h2 { font-size: 15pt; color: var(--navy); margin: 0 0 3mm; padding-bottom: 1.5mm; border-bottom: 1px solid var(--rule); break-after: avoid; page-break-after: avoid; }
+h2 .num { display: inline-block; min-width: 9mm; color: var(--green); }
+h3 { font-size: 11.5pt; color: var(--navy); margin: 4mm 0 2mm; break-after: avoid; page-break-after: avoid; }
+p { margin: 0 0 2.5mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 6mm; }
+li { margin-bottom: 1mm; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 8.8pt; background: var(--pale); padding: 0 1mm; border-radius: 1mm; }
+
+figure.diagram-fig { margin: 3mm 0 4mm; break-inside: avoid; page-break-inside: avoid; }
+figure.diagram-fig img { width: 100%; display: block; }
+.photo-caption { font-size: 8.4pt; color: var(--muted); margin-top: 1.5mm; font-style: italic; }
+
+.steps { list-style: none; padding-left: 0; counter-reset: step; }
+.steps > li { counter-increment: step; position: relative; padding-left: 8mm; margin-bottom: 1.8mm; break-inside: avoid; }
+.steps > li::before { content: counter(step); position: absolute; left: 0; top: 0.2mm; width: 5.2mm; height: 5.2mm; border-radius: 50%; background: var(--navy); color: #fff; font-size: 7.5pt; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+.who { font-size: 7.4pt; color: var(--amber); border: 1px solid var(--amber); border-radius: 3mm; padding: 0 1.5mm; margin-left: 1mm; white-space: nowrap; }
+
+.table-wrap { margin: 2.5mm 0 4mm; }
+table { width: 100%; border-collapse: collapse; font-size: 8.6pt; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; page-break-inside: avoid; }
+th { background: var(--navy); color: #fff; text-align: left; padding: 1.6mm 2mm; font-weight: bold; }
+td { padding: 1.4mm 2mm; border-bottom: 1px solid var(--edge); vertical-align: top; }
+tr:nth-child(even) td { background: #F8F9FB; }
+
+.diagram-grid { display: grid; gap: 2.5mm; margin: 3mm 0 4mm; }
+.diagram-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.diagram-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.diagram-panel { background: var(--pale); border: 1px solid var(--edge); border-left: 3px solid var(--navy); border-radius: 1.5mm; padding: 2.5mm 3mm; break-inside: avoid; page-break-inside: avoid; font-size: 8.8pt; }
+.diagram-panel h4 { margin: 0 0 1.2mm; font-size: 9.6pt; color: var(--navy); }
+.diagram-panel p { margin: 0; }
+.diagram-panel ul, .diagram-panel ol { margin: 0; padding-left: 5mm; }
+.diagram-panel.r { border-left-color: var(--red); } .diagram-panel.r h4 { color: var(--red); }
+.diagram-panel.y { border-left-color: var(--amber); } .diagram-panel.y h4 { color: var(--amber); }
+.diagram-panel.g { border-left-color: var(--green); } .diagram-panel.g h4 { color: var(--green); }
+.diagram-panel.p { border-left-color: var(--purple); } .diagram-panel.p h4 { color: var(--purple); }
+
+.callout { background: var(--pale); border: 1px solid var(--edge); border-left: 3px solid var(--navy); border-radius: 1.5mm; padding: 2.5mm 3.5mm; margin: 3mm 0 4mm; break-inside: avoid; page-break-inside: avoid; }
+.callout p { margin: 0; }
+.callout-label { font-size: 7.6pt; font-weight: bold; letter-spacing: .1em; text-transform: uppercase; color: var(--navy); margin-bottom: 1mm; }
+.callout.g { border-left-color: var(--green); } .callout.g .callout-label { color: var(--green); }
+.callout.y { border-left-color: var(--amber); } .callout.y .callout-label { color: var(--amber); }
+.callout.r { border-left-color: var(--red); } .callout.r .callout-label { color: var(--red); }
+
+.metric-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; margin: 3mm 0; }
+.metric { border: 1px solid var(--edge); border-radius: 1.5mm; padding: 2mm; text-align: center; break-inside: avoid; }
+.metric-label { font-size: 7pt; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.metric-value { font-size: 12pt; font-weight: bold; color: var(--navy); }
+
+.quote { border-left: 3px solid var(--green); background: var(--pale); padding: 2.5mm 4mm; font-style: italic; margin: 3mm 0; break-inside: avoid; }
+.quote .attr { display: block; font-style: normal; font-size: 8pt; color: var(--muted); margin-top: 1mm; }
+
+/* Appendix checklists */
+.check { list-style: none; padding-left: 0; columns: 2; column-gap: 10mm; }
+.check li { break-inside: avoid; padding: 1.2mm 0 1.2mm 7mm; position: relative; border-bottom: 1px dotted var(--rule); }
+.check li::before { content: ''; position: absolute; left: 0; top: 1.8mm; width: 3.6mm; height: 3.6mm; border: 1.2px solid var(--navy); border-radius: .6mm; }
+.sign { margin-top: 8mm; display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; }
+.sign div { border-top: 1px solid var(--ink); padding-top: 1.5mm; font-size: 8.5pt; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<section class="title-page">
+    <div class="kicker">JW Projects &middot; Report</div>
+    <h1>Cress Farming</h1>
+    <p class="sub">Building a cress combine harvester with an N20-motor cutter bar &mdash; design, step-by-step build guide, safety plan and upgrade manual.</p>
+    <img src="../diagrams/side_view.svg" alt="">
+    <div class="meta">Companion to the interactive presentation at brendanjameslynskey.github.io/Cress_Farming &middot; <!--DATE--></div>
+</section>
+
+<section class="front">
+    <h1 class="section">Summary for parents</h1>
+    <p><strong>What it is.</strong> A small working model harvester, about 24&nbsp;cm long, built mostly from foam board, lolly sticks, bamboo skewers and bottle caps. It rolls along two wooden rails beside a shallow tray of home-grown cress. A paddle reel sweeps the cress onto a plastic cutter bar, which snips it with a scissor action, and the cut cress goes up a short ramp into a small tank.</p>
+    <p><strong>How the cutter works.</strong> A 6&nbsp;V, 300&nbsp;RPM &ldquo;N20&rdquo; gear motor &mdash; a standard hobby motor about the size of a sugar cube &mdash; turns a small crank. A lolly-stick arm turns that rotation into a 10&nbsp;mm back-and-forth slide, moving a plastic knife over a fixed plastic guard comb. That makes ten gentle scissor cuts a second. It is the same principle as the knife on a real combine harvester.</p>
+
+    <div class="diagram-grid cols-3">
+        <div class="diagram-panel g"><h4>Safety at a glance</h4><p>6&nbsp;V AA batteries (no shock risk); plastic knife; self-resetting fuse; ON/OFF switch; hold-to-run button; batteries removed before touching the cutter; an adult does all craft-knife and hot-glue work.</p></div>
+        <div class="diagram-panel y"><h4>Cost and time</h4><p>About &pound;20 if household items are used (about &pound;28 all new). Two afternoons of building; the cress grows for a week in parallel. Everything fits in a shoebox.</p></div>
+        <div class="diagram-panel"><h4>What gets learned</h4><p>Plant biology, measuring, ratios and rates, mechanisms (cranks and gearboxes), simple circuits and safety devices, and methodical testing and fault-finding.</p></div>
+    </div>
+
+    <div class="callout y">
+        <div class="callout-label">A design, not a tested kit</div>
+        <p>The dimensions in this report are careful starting points. Chapter 19 (Troubleshooting) lists what to adjust if something doesn&rsquo;t work first time, which is a normal and valuable part of an engineering project.</p>
+    </div>
+
+    <h1 class="section" style="margin-top: 8mm;">Contents</h1>
+    <ol class="toc">
+<!--TOC-->
+        <li><span class="n">A</span>Appendix &mdash; parts checklist and pre-run sign-off</li>
+    </ol>
+</section>
+
+<!--BODY-->
+
+<section class="chapter new-page">
+    <h2><span class="num">A</span>Appendix &mdash; parts checklist and pre-run sign-off</h2>
+    <h3>Parts checklist</h3>
+    <ul class="check">
+        <li>N20 gear motor, 6 V, 300 RPM</li>
+        <li>4 &times; AA battery box with switch</li>
+        <li>4 AA batteries</li>
+        <li>Momentary push button (normally open)</li>
+        <li>Resettable PTC fuse, 500 mA</li>
+        <li>100 nF ceramic capacitor (&ldquo;104&rdquo;)</li>
+        <li>Lever connectors and hook-up wire</li>
+        <li>A3 foam board, 5 mm</li>
+        <li>A4 stiff plastic, 1 mm</li>
+        <li>2 &times; wooden strips 10 &times; 10 &times; 450 mm</li>
+        <li>6 jumbo lolly sticks</li>
+        <li>4 bamboo skewers + narrow straws</li>
+        <li>6 brass split pins</li>
+        <li>4 matching bottle caps</li>
+        <li>Rubber bands, cable ties, masking tape</li>
+        <li>Shallow tray (&le; 110 mm wide) and a small tub</li>
+        <li>Cress seeds and kitchen paper</li>
+        <li>Board for the field, candle for wax</li>
+    </ul>
+
+    <h3>Pre-run sign-off (tick every item before each harvest)</h3>
+    <ul class="check">
+        <li>Knife slides freely; no cracked or bent teeth</li>
+        <li>Crank pin has its stop glued on the tip</li>
+        <li>Split pins on the arms and knife are secure</li>
+        <li>Wires tied clear of the crank, belt and wheels</li>
+        <li>Releasing the button stops the knife at once</li>
+        <li>End-stop switch stops both motors (if fitted)</li>
+        <li>Machine runs straight on the rails with no crop</li>
+        <li>Tray on its board, towel underneath</li>
+        <li>Hands washed; tray clean; cress will be rinsed</li>
+        <li>Everyone knows: batteries out before touching the knife</li>
+    </ul>
+    <div class="sign">
+        <div>Builder</div>
+        <div>Grown-up</div>
+    </div>
+</section>
+
+</body>
+</html>

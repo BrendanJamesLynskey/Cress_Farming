@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" font-family="Inter, 'DejaVu Sans', Arial, sans-serif" role="img" aria-label="How the knife shears a cress stem in three steps">
+<title>How the knife shears a cress stem in three steps</title>
+<defs><marker id="ahFFFFFF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFFFFF"/></marker></defs>
+<rect x="1.0" y="1.0" width="898.0" height="288.0" rx="14" fill="#FBF8F0" stroke="#DDD5C2" stroke-width="2" opacity="1"/>
+<rect x="20.0" y="20.0" width="280.0" height="250.0" rx="10" fill="#FFFFFF" stroke="#DDD5C2" stroke-width="1.5" opacity="1"/>
+<polygon points="52.0,50.0 148.0,50.0 100.0,190.0" fill="#4A9BE0" stroke="#0B5CAD" stroke-width="1.5" stroke-linejoin="round" opacity="1"/>
+<polygon points="172.0,50.0 268.0,50.0 220.0,190.0" fill="#4A9BE0" stroke="#0B5CAD" stroke-width="1.5" stroke-linejoin="round" opacity="1"/>
+<circle cx="160.0" cy="150.0" r="7.5" fill="#3E8E41" stroke="#2A6B2D" stroke-width="1.5" opacity="1"/>
+<polygon points="52.0,50.0 148.0,50.0 100.0,190.0" fill="#E63946" stroke="#A61E2A" stroke-width="1.5" stroke-linejoin="round" opacity="0.72"/>
+<line x1="80.0" y1="70.0" x2="130.0" y2="70.0" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" opacity="1" marker-end="url(#ahFFFFFF)"/>
+<text x="160.0" y="222.0" font-size="15" font-weight="700" fill="#1B2A4A" text-anchor="middle">1 · Gap open</text>
+<text x="160.0" y="242.0" font-size="12.5" font-weight="400" fill="#5A6673" text-anchor="middle">a stem slides into the V</text>
+<rect x="310.0" y="20.0" width="280.0" height="250.0" rx="10" fill="#FFFFFF" stroke="#DDD5C2" stroke-width="1.5" opacity="1"/>
+<polygon points="342.0,50.0 438.0,50.0 390.0,190.0" fill="#4A9BE0" stroke="#0B5CAD" stroke-width="1.5" stroke-linejoin="round" opacity="1"/>
+<polygon points="462.0,50.0 558.0,50.0 510.0,190.0" fill="#4A9BE0" stroke="#0B5CAD" stroke-width="1.5" stroke-linejoin="round" opacity="1"/>
+<circle cx="450.0" cy="150.0" r="7.5" fill="#3E8E41" stroke="#2A6B2D" stroke-width="1.5" opacity="1"/>
+<polygon points="386.0,50.0 482.0,50.0 434.0,190.0" fill="#E63946" stroke="#A61E2A" stroke-width="1.5" stroke-linejoin="round" opacity="0.72"/>
+<line x1="414.0" y1="70.0" x2="464.0" y2="70.0" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" opacity="1" marker-end="url(#ahFFFFFF)"/>
+<text x="450.0" y="222.0" font-size="15" font-weight="700" fill="#1B2A4A" text-anchor="middle">2 · Knife pushes</text>
+<text x="450.0" y="242.0" font-size="12.5" font-weight="400" fill="#5A6673" text-anchor="middle">stem is trapped against the guard</text>
+<rect x="600.0" y="20.0" width="280.0" height="250.0" rx="10" fill="#FFFFFF" stroke="#DDD5C2" stroke-width="1.5" opacity="1"/>
+<polygon points="632.0,50.0 728.0,50.0 680.0,190.0" fill="#4A9BE0" stroke="#0B5CAD" stroke-width="1.5" stroke-linejoin="round" opacity="1"/>
+<polygon points="752.0,50.0 848.0,50.0 800.0,190.0" fill="#4A9BE0" stroke="#0B5CAD" stroke-width="1.5" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="796.0" cy="128.0" rx="8" ry="4" fill="#3E8E41" stroke="none" stroke-width="1" transform="rotate(40.0 796.0 128.0)"/>
+<ellipse cx="805.0" cy="142.0" rx="8" ry="4" fill="#3E8E41" stroke="none" stroke-width="1" transform="rotate(40.0 805.0 142.0)"/>
+<text x="814.0" y="110.0" font-size="14" font-weight="700" fill="#A61E2A" text-anchor="start">snip!</text>
+<polygon points="728.0,50.0 824.0,50.0 776.0,190.0" fill="#E63946" stroke="#A61E2A" stroke-width="1.5" stroke-linejoin="round" opacity="0.72"/>
+<text x="740.0" y="222.0" font-size="15" font-weight="700" fill="#1B2A4A" text-anchor="middle">3 · Edges cross</text>
+<text x="740.0" y="242.0" font-size="12.5" font-weight="400" fill="#5A6673" text-anchor="middle">snip! — a scissor cut</text>
+</svg>
