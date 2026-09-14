@@ -13,7 +13,7 @@ const root = path.resolve(__dirname, '..');
 // Chapters that start a new part of the report get a page break and a part heading.
 const PARTS = { 'slide-01': 'Part 1 · The idea', 'slide-03': 'Part 2 · The design', 'slide-09': 'Part 3 · Getting ready',
                 'slide-12': 'Part 4 · Building it', 'slide-19': 'Part 5 · Fixing and upgrading',
-                'slide-26': 'Part 6 · Safety and summary' };
+                'slide-26': 'Part 6 · Safety and summary', 'slide-30': 'Part 7 · Converting a Korody RC combine' };
 
 (async () => {
   const browser = await puppeteer.launch({ headless: 'new', args: ['--no-sandbox'] });

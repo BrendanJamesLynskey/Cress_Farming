@@ -20,6 +20,7 @@ An interactive presentation and a printable PDF report on building a small worki
 - **Troubleshooting** table
 - **Upgrades:** adjustable cutting height, PWM speed dial, self-driving with a 15 RPM N20, automatic end-of-row stop, wider header, 3D-printed cutter bar, conveyor-belt feeder
 - **Safety plan**, rules card, pre-run checklist and jargon buster
+- **Part 7 &mdash; Converting a Korody RC combine (K-3602):** measure the toy first; choose a 3 V N20 from its measured speed; a drive-tap circuit (300 mA fuse &rarr; Schottky diode &rarr; cutter switch &rarr; JST plug) so the knife runs only while driving forward; optional field-mode resistor; tramline field with a sunken tray; header on the spare head's clip; opening and soldering steps, tests, troubleshooting and conversion safety
 
 ## Files
 

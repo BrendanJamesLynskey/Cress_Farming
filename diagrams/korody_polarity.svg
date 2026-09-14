@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" font-family="Inter, 'DejaVu Sans', Arial, sans-serif" role="img" aria-label="Finding which drive-motor wire is positive in forward with an LED tester">
+<title>Finding which drive-motor wire is positive in forward with an LED tester</title>
+<defs></defs>
+<rect x="1.0" y="1.0" width="898.0" height="278.0" rx="14" fill="#FBF8F0" stroke="#DDD5C2" stroke-width="2" opacity="1"/>
+<rect x="20.0" y="20.0" width="420.0" height="240.0" rx="10" fill="#FFFFFF" stroke="#DDD5C2" stroke-width="1.5" opacity="1"/>
+<text x="230.0" y="44.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">LED + 100 Ω resistor across the motor terminals</text>
+<rect x="320.0" y="90.0" width="12.0" height="56.0" rx="0" fill="#444" stroke="none" stroke-width="1.5" opacity="1"/>
+<rect x="332.0" y="84.0" width="90.0" height="68.0" rx="5" fill="#B8C0C8" stroke="#6B7280" stroke-width="1.5" opacity="1"/>
+<text x="377.0" y="172.0" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="middle">drive motor</text>
+<line x1="128.0" y1="130.0" x2="138.0" y2="130.0" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="119.8" y1="149.8" x2="126.9" y2="156.9" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="100.0" y1="158.0" x2="100.0" y2="168.0" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="80.2" y1="149.8" x2="73.1" y2="156.9" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="72.0" y1="130.0" x2="62.0" y2="130.0" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="80.2" y1="110.2" x2="73.1" y2="103.1" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="100.0" y1="102.0" x2="100.0" y2="92.0" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="119.8" y1="110.2" x2="126.9" y2="103.1" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<circle cx="100.0" cy="130.0" r="20.0" fill="#E63946" stroke="#A61E2A" stroke-width="2" opacity="1"/>
+<path d="M106,112 L106,80 L170,80" stroke="#777" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="170.0" y="73.0" width="46.0" height="14.0" rx="4" fill="#E9D8A6" stroke="#8A6D3B" stroke-width="1.5" opacity="1"/>
+<text x="193.0" y="66.0" font-size="11" font-weight="700" fill="#1B2A4A" text-anchor="middle">100 Ω</text>
+<path d="M216,80 L270,80 L270,102 L320,102" stroke="#D62828" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M94,148 L94,170 L270,170 L270,134 L320,134" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text x="114.0" y="100.0" font-size="10.5" font-weight="400" fill="#5A6673" text-anchor="start">long leg</text>
+<text x="102.0" y="186.0" font-size="10.5" font-weight="400" fill="#5A6673" text-anchor="start">short leg</text>
+<text x="292.0" y="96.0" font-size="12" font-weight="700" fill="#D62828" text-anchor="start">A</text>
+<text x="292.0" y="150.0" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="start">B</text>
+<text x="230.0" y="214.0" font-size="15" font-weight="700" fill="#3E8E41" text-anchor="middle">Press FORWARD — the LED lights</text>
+<text x="230.0" y="236.0" font-size="12.5" font-weight="400" fill="#5A6673" text-anchor="middle">the wire on the LED's long leg is wire A (+)</text>
+<rect x="460.0" y="20.0" width="420.0" height="240.0" rx="10" fill="#FFFFFF" stroke="#DDD5C2" stroke-width="1.5" opacity="1"/>
+<text x="670.0" y="44.0" font-size="12" font-weight="400" fill="#5A6673" text-anchor="middle">LED + 100 Ω resistor across the motor terminals</text>
+<rect x="760.0" y="90.0" width="12.0" height="56.0" rx="0" fill="#444" stroke="none" stroke-width="1.5" opacity="1"/>
+<rect x="772.0" y="84.0" width="90.0" height="68.0" rx="5" fill="#B8C0C8" stroke="#6B7280" stroke-width="1.5" opacity="1"/>
+<text x="817.0" y="172.0" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="middle">drive motor</text>
+<circle cx="540.0" cy="130.0" r="20.0" fill="#F6D5D8" stroke="#A61E2A" stroke-width="2" opacity="1"/>
+<path d="M546,112 L546,80 L610,80" stroke="#777" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="610.0" y="73.0" width="46.0" height="14.0" rx="4" fill="#E9D8A6" stroke="#8A6D3B" stroke-width="1.5" opacity="1"/>
+<text x="633.0" y="66.0" font-size="11" font-weight="700" fill="#1B2A4A" text-anchor="middle">100 Ω</text>
+<path d="M656,80 L710,80 L710,102 L760,102" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M534,148 L534,170 L710,170 L710,134 L760,134" stroke="#D62828" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text x="554.0" y="100.0" font-size="10.5" font-weight="400" fill="#5A6673" text-anchor="start">long leg</text>
+<text x="542.0" y="186.0" font-size="10.5" font-weight="400" fill="#5A6673" text-anchor="start">short leg</text>
+<text x="732.0" y="96.0" font-size="12" font-weight="700" fill="#D62828" text-anchor="start">A</text>
+<text x="732.0" y="150.0" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="start">B</text>
+<text x="670.0" y="214.0" font-size="15" font-weight="700" fill="#1B2A4A" text-anchor="middle">LED stays dark?</text>
+<text x="670.0" y="236.0" font-size="12.5" font-weight="400" fill="#5A6673" text-anchor="middle">swap the two clips and press forward again</text>
+</svg>

@@ -815,8 +815,288 @@ def compare():
     s.save("compare.svg", "Real combine harvester compared with the cress combine, colour-matched parts")
 
 
+# ================================================= Part 7: Korody RC conversion ===
+# The toy is drawn as a plain schematic shape: its insides are unknown, so the
+# figures show where things go, not the toy's real internals.
+TOY, TOYEDGE = "#43A047", "#2E7D32"
+
+
+def toy_wheel(s, cx, cy, r):
+    s.circle(cx, cy, r, fill="#222")
+    s.circle(cx, cy, r * 0.55, fill="#FBC02D", stroke="#B8860B", sw=1.5)
+    s.circle(cx, cy, 4, fill="#333")
+
+
+def korody_overview():
+    s = SVG(900, 480)
+    s.bg()
+    random.seed(21)
+    s.rect(30, 332, 840, 52, fill=C["tub"], stroke=C["tubedge"], rx=3)
+    s.rect(34, 356, 832, 22, fill=C["bed"], stroke=C["bededge"])
+    for x in range(44, 150, 11):
+        s.cress(x, 356, x + random.uniform(-5, 5), 356 - random.uniform(130, 150))
+    for x in range(152, 178, 8):
+        s.cress(x, 356, x + 26, 356 - random.uniform(100, 112))
+    for x in range(186, 866, 11):
+        s.line(x, 356, x + random.uniform(-1, 1), 318 + random.uniform(-2, 2), C["green"], 2.2)
+    s.rect(30, 330, 840, 13, fill="#E5E7EB", stroke=C["foamedge"], op=0.92)
+    s.text(470, 340.5, "tramline: the foam-board track the tyres run on", size=10.5, weight=600)
+    s.rect(30, 384, 840, 12, fill="#D1D5DB", stroke=C["foamedge"])
+    s.text(46, 410, "sunken tray between the tramlines · cress bed (15 − H) mm below the tramline top", size=12,
+           fill=C["muted"])
+    # the RC combine, as a simple shape
+    s.poly([(300, 250), (300, 150), (770, 150), (800, 250)], TOY, TOYEDGE, 2)
+    s.rect(300, 62, 115, 88, fill="#A8DADC", stroke=TOYEDGE, sw=3, rx=4)
+    s.rect(296, 56, 123, 10, fill=TOY, stroke=TOYEDGE, rx=3)
+    s.circle(357, 50, 6, fill=C["ramp"])
+    s.rect(470, 104, 210, 46, fill="#388E3C", stroke=TOYEDGE, sw=2)
+    s.path("M660,112 L790,58", C["grey"], 9)
+    s.poly([(300, 170), (300, 250), (250, 272), (242, 252)], TOY, TOYEDGE, 2)
+    s.rect(560, 156, 64, 40, fill="none", stroke="#FFFFFF", sw=1.5, dash="4 3")
+    s.text(592, 173, "circuit", size=10.5, weight=700, fill="#FFFFFF", anchor="middle")
+    s.text(592, 186, "board", size=10.5, weight=700, fill="#FFFFFF", anchor="middle")
+    s.rect(650, 156, 64, 40, fill="none", stroke="#FFFFFF", sw=1.5, dash="4 3")
+    s.text(682, 173, "drive", size=10.5, weight=700, fill="#FFFFFF", anchor="middle")
+    s.text(682, 186, "motor", size=10.5, weight=700, fill="#FFFFFF", anchor="middle")
+    s.path("M682,196 L682,210", "#FFFFFF", 1.5, dash="3 3")
+    s.rect(462, 190, 80, 42, fill="#FFFFFF", stroke=C["ink"], rx=4)
+    s.text(502, 207, "fuse · diode", size=10.5, weight=700, anchor="middle")
+    s.text(502, 222, "· switch", size=10.5, weight=700, anchor="middle")
+    s.path("M650,206 L542,206", C["red"], 2.4)
+    s.path("M650,214 L542,214", C["black"], 2.4)
+    s.path("M462,206 C400,206 320,200 272,232", C["red"], 2.4)
+    s.path("M462,214 C404,214 326,210 272,240", C["black"], 2.4)
+    s.rect(252, 226, 20, 18, fill="#FFFFFF", stroke=C["ink"], sw=1.5)
+    s.path("M252,232 C240,230 228,226 218,222", C["red"], 2.2)
+    s.path("M252,238 C240,238 232,232 226,222", C["black"], 2.2)
+    toy_wheel(s, 365, 272, 58)
+    toy_wheel(s, 730, 294, 36)
+    # new header on the toy's head mount
+    s.line(246, 262, 206, 300, C["metaledge"], 9)
+    s.line(246, 262, 206, 300, "#FFFFFF", 4.5)
+    s.circle(246, 262, 5, fill="#555")
+    s.poly([(252, 302), (252, 318), (304, 318), (304, 286)], C["tank"], C["tankedge"], 1.5)
+    s.rect(150, 300, 110, 6, fill=C["foam"], stroke=C["foamedge"], sw=1.2)
+    n20(s, 205, 224)
+    s.ellipse(218, 303, 15, 4, C["crank"], stroke=C["crankedge"])
+    s.poly([(250, 314), (250, 322), (180, 322), (150, 318), (180, 314)], C["guard"], C["guardedge"], 1.2)
+    s.poly([(246, 309), (246, 314), (178, 314), (160, 311.5), (178, 309)], C["knife"], C["knifedge"], 1.2)
+    # labels
+    s.line(210, 34, 44, 34, C["ink"], 3, end=True)
+    s.text(222, 39, "drive forward: the knife runs · reverse or stop: it doesn't", size=14, weight=600)
+    s.label(490, 80, "Your RC combine", "drawn as a simple shape", TOY)
+    s.label(40, 446, "N20 (3 V)", "runs only when driving", C["brass"])
+    s.leader(90, 430, 206, 262)
+    s.label(200, 446, "Cutter bar", "same scissor knife", C["knife"])
+    s.leader(240, 430, 200, 320)
+    s.label(360, 446, "JST plug", "header unplugs", "#FFFFFF")
+    s.leader(380, 430, 262, 244)
+    s.label(500, 446, "Tap circuit", "on the drive-motor wires", C["red"])
+    s.leader(520, 430, 502, 232)
+    s.label(700, 446, "Catch tank", "right behind the knife", C["tank"])
+    s.leader(710, 430, 290, 312)
+    s.save("korody_overview.svg", "Korody RC combine converted with an N20 cutter header and drive-motor tap")
+
+
+def korody_wiring():
+    s = SVG(900, 460)
+    s.bg()
+    s.rect(30, 250, 120, 76, fill=C["battery"], rx=6)
+    s.text(90, 282, "3.7 V", size=15, weight=700, fill="#FFFFFF", anchor="middle")
+    s.text(90, 300, "Li-ion (14500)", size=11, fill="#D1D5DB", anchor="middle")
+    s.text(90, 344, "toy's battery", size=12, fill=C["muted"], anchor="middle")
+    s.rect(200, 220, 170, 130, fill=C["pcb"], rx=8)
+    s.rect(250, 266, 64, 40, fill="#111111", rx=3)
+    s.text(282, 291, "driver", size=11, weight=700, fill="#FFFFFF", anchor="middle")
+    s.text(285, 244, "toy's circuit board", size=12, weight=700, fill="#FFFFFF", anchor="middle")
+    s.text(285, 334, "radio + motor driver", size=11, fill="#D1FAE5", anchor="middle")
+    s.path("M150,270 L200,270", C["red"], 4)
+    s.path("M150,306 L200,306", C["black"], 4)
+    # drive motor
+    s.rect(690, 272, 14, 60, fill="#444")
+    s.rect(704, 266, 120, 72, fill=C["metal"], stroke=C["metaledge"], rx=6)
+    s.line(824, 302, 860, 302, "#555", 5, cap="butt")
+    s.text(764, 362, "toy's drive motor", size=13, weight=700, anchor="middle")
+    # motor wires, optional field-mode resistor on wire A
+    s.path("M370,262 L530,262", C["red"], 4)
+    s.path("M600,262 L660,262 L660,290 L694,290", C["red"], 4)
+    s.path("M370,320 L660,320 L660,314 L694,314", C["black"], 4)
+    s.rect(500, 206, 134, 76, fill="none", stroke=C["muted"], sw=1.3, dash="5 4", rx=6)
+    s.text(567, 200, "optional field mode", size=11, weight=700, fill=C["muted"], anchor="middle")
+    s.rect(530, 254, 70, 16, fill="#E9D8A6", stroke="#8A6D3B", rx=5)
+    for x, col in ((545, "#D62828"), (555, "#D62828"), (578, "#C9A227"), (588, "#C9A227")):
+        s.line(x, 255, x, 269, col, 3, cap="butt")
+    s.path("M515,262 L515,230 L548,230", C["muted"], 2)
+    s.line(548, 230, 578, 220, C["muted"], 2.5)
+    s.path("M586,230 L618,230 L618,262", C["muted"], 2)
+    s.text(567, 296, "2.2 Ω 2 W + bypass switch", size=10.5, fill=C["muted"], anchor="middle")
+    s.text(380, 252, "wire A", size=11.5, weight=700, fill=C["red"])
+    s.text(380, 340, "wire B", size=11.5, weight=700)
+    # tap chain
+    s.circle(430, 262, 5, fill=C["red"])
+    s.circle(455, 320, 5, fill=C["black"])
+    s.path("M430,262 L430,110 L464,110", C["red"], 3.5)
+    s.circle(482, 110, 18, fill="#FFD166", stroke="#C99A2E", sw=2)
+    s.text(482, 114, "PTC", size=9.5, weight=700, anchor="middle")
+    s.path("M500,110 L540,110", C["red"], 3.5)
+    s.rect(540, 100, 64, 20, fill="#111111", rx=3)
+    s.rect(592, 100, 7, 20, fill="#D1D5DB")
+    s.text(564, 114, "1N5819", size=9, weight=700, fill="#FFFFFF", anchor="middle")
+    s.path("M604,110 L640,110", C["red"], 3.5)
+    s.rect(640, 94, 64, 32, fill=C["grey"], stroke=C["metaledge"], rx=4)
+    s.rect(648, 102, 48, 16, fill="#4B5563", rx=2)
+    s.rect(674, 104, 20, 12, fill="#E5E7EB", rx=2)
+    s.path("M704,110 L716,110", C["red"], 3.5)
+    s.rect(716, 94, 22, 96, fill="#FFFFFF", stroke=C["ink"], sw=1.5)
+    s.rect(740, 94, 22, 96, fill="#F5F5F4", stroke=C["ink"], sw=1.5)
+    s.path("M762,110 L780,110 L780,145 L803,145", C["red"], 3)
+    s.path("M803,160 L780,160 L780,172 L762,172", C["black"], 3)
+    s.path("M716,172 L455,172 L455,320", C["black"], 3.5)
+    s.line(770, 145, 770, 160, "#777", 1.5)
+    s.circle(770, 152, 6.5, fill="#E09F3E", stroke="#9A6A1F")
+    n20(s, 800, 139, horizontal=True, scale=0.9)
+    s.text(470, 72, "300 mA fuse", size=12.5, weight=700, anchor="middle")
+    s.text(572, 40, "Schottky diode", size=12.5, weight=700, anchor="middle")
+    s.text(572, 56, "stripe towards the N20", size=11, fill=C["muted"], anchor="middle")
+    s.text(672, 80, "cutter ON/OFF", size=12.5, weight=700, anchor="middle")
+    s.text(739, 208, "JST plug", size=12.5, weight=700, anchor="middle")
+    s.text(739, 223, "header unplugs", size=11, fill=C["muted"], anchor="middle")
+    s.text(840, 128, "N20 · 3 V", size=12.5, weight=700, anchor="middle")
+    s.text(840, 186, "+ 100 nF", size=11, fill=C["muted"], anchor="middle")
+    s.text(560, 166, "black back to wire B", size=11, fill=C["muted"], anchor="middle")
+    s.rect(30, 380, 410, 64, fill="#FFFFFF", stroke=C["edge"], rx=8)
+    s.text(46, 404, "FORWARD: wire A is + → diode conducts → knife cuts", size=13, weight=700, fill=C["green"])
+    s.text(46, 426, "Let go of the stick → no power → wheels and knife stop.", size=12, fill=C["muted"])
+    s.rect(460, 380, 410, 64, fill="#FFFFFF", stroke=C["edge"], rx=8)
+    s.text(476, 404, "REVERSE: polarity flips → diode blocks → no cutting", size=13, weight=700, fill=C["knifedge"])
+    s.text(476, 426, "Cutter switch OFF → drive around without cutting.", size=12, fill=C["muted"])
+    s.save("korody_wiring.svg", "Wiring the N20 cutter to the RC combine's drive motor through a fuse, diode and switch")
+
+
+def korody_field():
+    s = SVG(900, 400)
+    s.bg()
+    s.rect(140, 30, 620, 76, fill=TOY, stroke=TOYEDGE, op=0.22, rx=10)
+    s.text(450, 74, "your combine, seen from the front", size=13, weight=700, fill=TOYEDGE, anchor="middle")
+    s.rect(40, 290, 820, 20, fill="#D1D5DB", stroke=C["foamedge"])
+    for x0, x1 in ((60, 285), (615, 840)):
+        s.rect(x0, 200, x1 - x0, 90, fill="#F3F4F6", stroke=C["foamedge"])
+        for yy in (230, 260):
+            s.line(x0, yy, x1, yy, C["foamedge"], 0.8, dash="3 3")
+    s.text(172, 250, "tramline", size=12.5, weight=700, anchor="middle")
+    s.text(172, 268, "stacked foam board", size=11, fill=C["muted"], anchor="middle")
+    s.text(728, 250, "tramline", size=12.5, weight=700, anchor="middle")
+    for kx in (110, 238, 662, 790):
+        s.rect(kx, 186, 8, 14, fill=C["wood"], stroke=C["woodedge"], sw=1)
+    for tx in (125, 675):
+        s.rect(tx, 116, 100, 84, fill="#222222", rx=10)
+    s.text(175, 162, "tyre", size=12, weight=700, fill="#FFFFFF", anchor="middle")
+    s.text(725, 162, "tyre", size=12, weight=700, fill="#FFFFFF", anchor="middle")
+    s.rect(285, 200, 330, 90, fill=C["tub"], stroke=C["tubedge"], sw=2)
+    s.rect(291, 230, 318, 56, fill=C["bed"], stroke=C["bededge"])
+    for x in range(300, 604, 10):
+        s.line(x, 230, x, 186, C["green"], 2)
+    s.rect(262, 178, 376, 7, fill=C["knife"], stroke=C["knifedge"], sw=1)
+    s.rect(262, 185, 376, 6, fill=C["guard"], stroke=C["guardedge"], sw=1)
+    s.text(450, 172, "knife", size=11.5, weight=700, fill=C["knifedge"], anchor="middle")
+    s.line(250, 186, 250, 200, C["ink"], 1.3, start=True, end=True)
+    s.text(242, 197, "H", size=13, weight=700, anchor="end")
+    s.line(650, 186, 650, 230, C["ink"], 1.3, start=True, end=True)
+    s.text(660, 212, "15 mm cut", size=11.5, weight=700)
+    s.line(225, 112, 675, 112, C["ink"], 1.3, start=True, end=True)
+    s.text(450, 126, "gap between the tyres (measure it)", size=12, weight=700, anchor="middle")
+    s.line(285, 326, 615, 326, C["ink"], 1.3, start=True, end=True)
+    s.text(450, 344, "tray width ≤ tyre gap − 20 mm", size=12.5, weight=700, anchor="middle")
+    s.text(450, 372, "bed depth below the tramline top = 15 mm − H   ·   kerbs (lolly sticks) keep the tyres on track",
+           size=12.5, fill=C["muted"], anchor="middle")
+    s.save("korody_field.svg", "Front view of the field: tramlines, sunken tray and cutting height")
+
+
+def korody_polarity():
+    s = SVG(900, 280)
+    s.bg()
+    panels = ((True, "Press FORWARD — the LED lights", "the wire on the LED's long leg is wire A (+)"),
+              (False, "LED stays dark?", "swap the two clips and press forward again"))
+    for k, (lit, title, sub) in enumerate(panels):
+        ox = 20 + 440 * k
+        s.rect(ox, 20, 420, 240, fill="#FFFFFF", stroke=C["edge"], rx=10)
+        s.text(ox + 210, 44, "LED + 100 Ω resistor across the motor terminals", size=12, fill=C["muted"],
+               anchor="middle")
+        s.rect(ox + 300, 90, 12, 56, fill="#444")
+        s.rect(ox + 312, 84, 90, 68, fill=C["metal"], stroke=C["metaledge"], rx=5)
+        s.text(ox + 357, 172, "drive motor", size=12, weight=700, anchor="middle")
+        lx, ly = ox + 80, 130
+        if lit:
+            for a in range(0, 360, 45):
+                r = math.radians(a)
+                s.line(lx + 28 * math.cos(r), ly + 28 * math.sin(r), lx + 38 * math.cos(r), ly + 38 * math.sin(r),
+                       "#F59E0B", 2.5)
+        s.circle(lx, ly, 20, fill=C["knife"] if lit else "#F6D5D8", stroke=C["knifedge"], sw=2)
+        long_col, short_col = (C["red"], C["black"]) if k == 0 else (C["black"], C["red"])
+        s.path(f"M{lx + 6},{ly - 18} L{lx + 6},{ly - 50} L{ox + 150},{ly - 50}", "#777", 2)
+        s.rect(ox + 150, ly - 57, 46, 14, fill="#E9D8A6", stroke="#8A6D3B", rx=4)
+        s.text(ox + 173, ly - 64, "100 Ω", size=11, weight=700, anchor="middle")
+        s.path(f"M{ox + 196},{ly - 50} L{ox + 250},{ly - 50} L{ox + 250},{102} L{ox + 300},{102}", long_col, 3)
+        s.path(f"M{lx - 6},{ly + 18} L{lx - 6},{ly + 40} L{ox + 250},{ly + 40} L{ox + 250},{134} L{ox + 300},{134}",
+               short_col, 3)
+        s.text(lx + 14, ly - 30, "long leg", size=10.5, fill=C["muted"])
+        s.text(lx + 2, ly + 56, "short leg", size=10.5, fill=C["muted"])
+        s.text(ox + 272, 96, "A", size=12, weight=700, fill=C["red"])
+        s.text(ox + 272, 150, "B", size=12, weight=700)
+        s.text(ox + 210, 214, title, size=15, weight=700, anchor="middle", fill=C["green"] if lit else C["ink"])
+        s.text(ox + 210, 236, sub, size=12.5, fill=C["muted"], anchor="middle")
+    s.save("korody_polarity.svg", "Finding which drive-motor wire is positive in forward with an LED tester")
+
+
+def korody_header():
+    s = SVG(900, 470)
+    s.bg()
+    s.poly([(700, 150), (860, 120), (860, 300), (700, 270)], TOY, TOYEDGE, 2)
+    s.text(790, 206, "toy's feeder", size=12, weight=700, fill="#FFFFFF", anchor="middle")
+    s.text(790, 222, "house", size=12, weight=700, fill="#FFFFFF", anchor="middle")
+    for (x1, y1, x2, y2, x3, y3) in ((236, 110, 560, 110, 624, 192), (236, 320, 560, 320, 624, 228)):
+        s.path(f"M{x1},{y1} L{x2},{y2} L{x3},{y3}", C["metaledge"], 12)
+        s.path(f"M{x1},{y1} L{x2},{y2} L{x3},{y3}", "#FFFFFF", 7)
+    s.rect(616, 178, 84, 64, fill=C["grey"], stroke=C["metaledge"], rx=4)
+    s.circle(700, 210, 7, fill="#555")
+    s.rect(236, 92, 120, 236, fill=C["tank"], stroke=C["tankedge"])
+    s.text(296, 214, "CATCH", size=13, weight=700, fill="#FFFFFF", anchor="middle")
+    s.text(296, 230, "TANK", size=13, weight=700, fill="#FFFFFF", anchor="middle")
+    s.rect(206, 80, 30, 340, fill=C["foam"], stroke=C["foamedge"], sw=1.2)
+    for i in range(12):
+        c = 100 + 20 * i
+        s.poly([(206, c - 8), (206, c + 8), (178, c)], C["guard"], C["guardedge"], 1)
+        s.poly([(206, c + 2), (206, c + 18), (186, c + 10)], C["knife"], C["knifedge"], 1, op=0.9)
+    s.line(221, 334, 219, 400, C["wood"], 7)
+    s.circle(229, 402, 15, fill=C["crank"], stroke=C["crankedge"])
+    s.circle(219, 402, 3.5, fill=C["brass"], stroke=C["brassedge"], sw=1)
+    s.rect(216, 390, 30, 26, fill=C["metal"], stroke=C["metaledge"], op=0.55, rx=2)
+    s.rect(586, 296, 26, 16, fill="#FFFFFF", stroke=C["ink"], sw=1.5)
+    s.path("M246,408 L596,408 L596,312", C["red"], 2.4)
+    s.path("M246,414 L604,414 L604,312", C["black"], 2.4)
+    s.path("M612,300 L660,300 L706,262", C["red"], 2)
+    s.path("M612,306 L664,306 L710,268", C["black"], 2)
+    s.line(150, 92, 150, 328, C["ink"], 1.3, start=True, end=True)
+    s.text(140, 210, "cut width 120 mm", size=12.5, weight=700, anchor="middle", rot=-90)
+    s.line(90, 80, 90, 420, C["ink"], 1.3, start=True, end=True)
+    s.text(80, 250, "mount plate = cut width + 60 mm", size=12.5, weight=700, anchor="middle", rot=-90)
+    s.line(420, 40, 250, 40, C["ink"], 3, end=True)
+    s.text(432, 45, "direction of travel", size=14, weight=600)
+    s.text(420, 446, "N20 (3 V) + crank on the plate, inside the header width", size=12.5, weight=700,
+           fill=C["brassedge"])
+    s.leader(420, 440, 248, 404)
+    s.text(740, 350, "clip part kept from the", size=12.5, weight=700, anchor="middle")
+    s.text(740, 366, "spare head (grown-up cuts)", size=12.5, weight=700, anchor="middle")
+    s.leader(740, 336, 668, 242)
+    s.text(740, 396, "to the tap circuit →", size=12, fill=C["muted"], anchor="middle")
+    s.text(740, 420, "coins in the grain tank balance the header", size=12, fill=C["muted"], anchor="middle")
+    s.text(600, 290, "JST", size=11, weight=700, anchor="middle")
+    s.save("korody_header.svg", "Top view of the new cutter header fitted to the RC combine's head mount")
+
+
 if __name__ == "__main__":
     for fn in (side_view, plan_view, cutter_mechanism, shear_frames, wiring, templates, reel_ratio,
-               mod_height, mod_speed, mod_drive, growing, compare):
+               mod_height, mod_speed, mod_drive, growing, compare,
+               korody_overview, korody_wiring, korody_field, korody_polarity, korody_header):
         fn()
     print("wrote", len([f for f in os.listdir(OUT) if f.endswith(".svg")]), "SVGs")

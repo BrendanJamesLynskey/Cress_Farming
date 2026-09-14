@@ -20,6 +20,7 @@
         <a href="#slide-12">Build</a>
         <a href="#slide-20">Upgrades</a>
         <a href="#slide-26">Safety</a>
+        <a href="#slide-30">Korody RC</a>
         <a href="Cress_Farming.pdf">PDF report</a>
         <a href="https://github.com/BrendanJamesLynskey/JW">Hub</a>
     </div>
@@ -28,13 +29,14 @@
 <header class="hero">
     <div class="series-label">JW Projects &mdash; Cress Farming</div>
     <h1>Build a <span class="accent">Cress</span> Combine <span class="accent-2">Harvester</span></h1>
-    <p class="subtitle">A small working harvester that cuts home-grown cress with a scissor-action knife, driven by a tiny N20 gear motor. How real combines work, coloured diagrams, a shopping list, step-by-step build instructions, a safety plan &mdash; and seven ways to upgrade it.</p>
+    <p class="subtitle">A small working harvester that cuts home-grown cress with a scissor-action knife, driven by a tiny N20 gear motor. How real combines work, coloured diagrams, a shopping list, step-by-step build instructions, a safety plan, seven ways to upgrade it &mdash; and how to convert a Korody RC combine so its cutter runs whenever you drive.</p>
     <div class="tags">
         <span class="tag">N20 gear motor</span>
         <span class="tag r">Scissor cutter bar</span>
         <span class="tag g">6 V batteries</span>
         <span class="tag y">Hold-to-run safety</span>
         <span class="tag p">7 upgrades</span>
+        <span class="tag g">Korody RC conversion</span>
         <span class="tag">Egg &amp; cress sandwiches</span>
     </div>
     <div class="actions">
@@ -76,6 +78,15 @@
         <li><a href="#slide-27">What I'll learn</a></li>
         <li><a href="#slide-28">Jargon buster</a></li>
         <li><a href="#slide-29">Cheat sheet &mdash; so, Mum&hellip;?</a></li>
+        <li><a href="#slide-30">Part 7 &mdash; Converting a Korody RC combine</a></li>
+        <li><a href="#slide-31">Measure your combine first</a></li>
+        <li><a href="#slide-32">Choosing the N20 for your combine</a></li>
+        <li><a href="#slide-33">The drive-tap circuit</a></li>
+        <li><a href="#slide-34">Build K1 &mdash; The field with tramlines</a></li>
+        <li><a href="#slide-35">Build K2 &mdash; The new header</a></li>
+        <li><a href="#slide-36">Build K3 &mdash; Opening the toy and wiring the tap</a></li>
+        <li><a href="#slide-37">Build K4 &mdash; Test, tune and harvest</a></li>
+        <li><a href="#slide-38">Conversion safety</a></li>
     </ul>
 </section>
 
@@ -216,6 +227,11 @@
         <div class="callout-label">Honest note</div>
         <p>This is a <strong>design to build</strong>, not a kit that has been tested a hundred times. Every size here is a sensible starting point, and the troubleshooting page says what to change if something doesn&rsquo;t work first time. That&rsquo;s normal &mdash; it&rsquo;s what engineers do.</p>
     </div>
+
+    <div class="callout">
+        <div class="callout-label">Already have a Korody RC combine?</div>
+        <p>Instead of building a chassis, you can fit this cutter to the radio-controlled toy and wire it to the drive motor, so it cuts whenever you drive forward. See <a href="#slide-30">Part 7</a>.</p>
+    </div>
 </section>
 
 <section class="slide" id="slide-04">
@@ -346,12 +362,12 @@
     <div class="control-panel">
         <div class="control-row">
             <label for="rpm">Motor speed</label>
-            <input type="range" id="rpm" min="50" max="600" value="300" step="25">
+            <input type="range" id="rpm" min="50" max="1000" value="300" step="25">
             <span class="val" id="rpm-val">300 RPM</span>
         </div>
         <div class="control-row">
             <label for="push">Push speed</label>
-            <input type="range" id="push" min="5" max="120" value="20" step="5">
+            <input type="range" id="push" min="5" max="300" value="20" step="5">
             <span class="val" id="push-val">20 mm/s</span>
         </div>
         <div class="control-row">
@@ -1116,11 +1132,303 @@
         <li><strong>Safety:</strong> 6 V batteries, plastic knife, fuse &rarr; switch &rarr; hold-to-run button, grown-up does knives and glue, batteries out before touching the cutter.</li>
         <li><strong>Cost and time:</strong> about &pound;20, two afternoons of building, one week of growing.</li>
         <li><strong>Upgrades:</strong> adjustable height, speed dial, self-driving with an automatic stop, wider header, 3D-printed cutter, conveyor feeder.</li>
+        <li><strong>Got a Korody RC combine?</strong> Part 7 fits the cutter to it and wires a 3 V N20 to the drive motor through a fuse and a diode, so the knife runs only while you drive forward.</li>
     </ul>
 
     <div class="callout g">
         <div class="callout-label">So, Mum&hellip; can we?</div>
         <p>It&rsquo;s safe, cheap, tidy and planned down to the last millimetre. I&rsquo;ll learn about plants, maths, machines and circuits &mdash; and at the end of the week, you get an egg &amp; cress sandwich made from a crop I grew and harvested with a machine I built. Everything is also in the <a href="Cress_Farming.pdf">PDF report</a>, so you can read it properly first.</p>
+    </div>
+</section>
+
+<!-- ============================================================ KORODY RC CONVERSION -->
+<section class="slide" id="slide-30">
+    <div class="slide-number">30</div>
+    <h2>Converting a Korody RC combine</h2>
+    <p>Already got a <strong>Korody RC 1:24 combine harvester</strong> (model K-3602)? It&rsquo;s a radio-controlled toy about 28&nbsp;cm long, with a 3.7&nbsp;V rechargeable battery, lights, engine sound and a smoke effect. It comes with two front heads &mdash; but, as the model shops point out, they <em>don&rsquo;t actually cut</em>: they only spin when pushed against something.</p>
+    <p>This part turns it into a <strong>working</strong> cress harvester. We swap one head for our N20 scissor cutter and wire the N20 to the toy&rsquo;s own <strong>drive motor</strong> &mdash; so the knife runs only while you&rsquo;re driving forward.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/korody_overview.svg" alt="RC combine with the new N20 cutter header, catch tank and a tap circuit on the drive-motor wires, driving along tramlines beside a sunken cress tray">
+        <figcaption class="photo-caption">The toy drives along two foam-board tramlines either side of a sunken cress tray. The new header sits on the toy&rsquo;s head mount; its N20 is powered from the drive-motor wires through a small tap circuit, and it unplugs at a JST connector.</figcaption>
+    </figure>
+
+    <div class="diagram-grid cols-3">
+        <div class="diagram-panel g">
+            <h4>What stays</h4>
+            <p>The toy&rsquo;s body, wheels, drive and steering, radio, battery, charger, lights and sound. It still works as a normal toy with the header unplugged.</p>
+        </div>
+        <div class="diagram-panel y">
+            <h4>What&rsquo;s new</h4>
+            <p>A cutter header on the head mount, a 3&nbsp;V N20, a tap circuit (fuse, diode, cutter switch, plug) and a field with tramlines.</p>
+        </div>
+        <div class="diagram-panel r">
+            <h4>No longer needed</h4>
+            <p>The rails, handle, 4&nbsp;&times;&nbsp;AA box and hold-to-run button. The remote&rsquo;s stick becomes the hold-to-run control.</p>
+        </div>
+    </div>
+
+    <div class="callout g">
+        <div class="callout-label">Why wire the cutter to the drive motor?</div>
+        <p>No second battery and no button to forget: let go of the stick and the wheels and knife stop together. A diode means <strong>reversing doesn&rsquo;t cut</strong>, so you can back up safely. And if the toy&rsquo;s throttle is proportional, driving slower slows the knife too, so the distance between cuts stays roughly the same.</p>
+    </div>
+
+    <div class="callout y">
+        <div class="callout-label">Honest note</div>
+        <p>There are no published photos of the inside of the K-3602, or details of its motors, steering or how the heads clip on. So this part starts by <strong>measuring your combine</strong>, and every size is worked out from your measurements. Opening the toy will probably end its warranty, and the soldering is a grown-up job.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-31">
+    <div class="slide-number">31</div>
+    <h2>Measure your combine first</h2>
+    <p>Six measurements decide every choice in the conversion. Write them in a notebook &mdash; you&rsquo;ll use them on the next four pages.</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>#</th><th>Measure</th><th>How</th><th>It decides</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td><strong>Top speed</strong></td><td>Mark 1&nbsp;m on the floor with tape. Drive the whole way at full stick and time it on a phone stopwatch. Do three runs and average. Speed in mm/s = 1000 &divide; seconds.</td><td>Which N20 to buy</td></tr>
+                <tr><td>2</td><td><strong>Throttle type</strong></td><td>Nudge the stick gently. If the combine creeps slowly, it&rsquo;s <em>proportional</em>; if it jumps straight to full speed, it&rsquo;s <em>on/off</em>.</td><td>Whether you can just drive slowly</td></tr>
+                <tr><td>3</td><td><strong>Tyre gap</strong></td><td>From the inside face of one front tyre to the inside face of the other. Check the rear tyres too and use the smaller gap. Also measure tyre width.</td><td>Tray width and tramline spacing</td></tr>
+                <tr><td>4</td><td><strong>Header width and mount</strong></td><td>Measure the supplied heads&rsquo; width. Watch closely how a head clips on and off.</td><td>Cut width and the bracket</td></tr>
+                <tr><td>5</td><td><strong>Knife height H</strong></td><td>After Build K2: combine on a flat table, measure from the table to the underside of the knife.</td><td>How deep the cress bed sits</td></tr>
+                <tr><td>6</td><td><strong>Forward wire</strong></td><td>During Build K3, with the LED tester below.</td><td>Which way round the diode goes</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/korody_polarity.svg" alt="LED and resistor clipped across the drive motor terminals: lit means the long-leg wire is positive in forward">
+        <figcaption class="photo-caption">An LED only lights when current flows from its long leg to its short leg. Clip an LED and a 100&nbsp;&Omega; resistor across the drive-motor terminals, lift the wheels, and press forward. When it lights, the wire on the long leg is <strong>wire A</strong>, the + wire in forward. Mark it with tape.</figcaption>
+    </figure>
+</section>
+
+<section class="slide" id="slide-32">
+    <div class="slide-number">32</div>
+    <h2>Choosing the N20 for your combine</h2>
+    <p>A radio-controlled toy drives much faster than you push by hand, so the knife needs more cuts per second to keep to the <a href="#slide-07">golden rule</a> of less than 5&nbsp;mm between cuts. Use your measured speed:</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Number</th><th>Sum</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Cuts per second</strong></td><td>N20 RPM &divide; 30</td></tr>
+                <tr><td><strong>Distance per cut</strong></td><td>30 &times; speed (mm/s) &divide; RPM</td></tr>
+                <tr><td><strong>Clean cut needs</strong></td><td>RPM &ge; 6 &times; speed (mm/s)</td></tr>
+                <tr><td><strong>&ldquo;Mostly cut&rdquo; needs</strong></td><td>RPM &ge; 3 &times; speed (mm/s)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Measured speed</th><th>RPM for a clean cut</th><th>RPM for &ldquo;mostly cut&rdquo;</th><th>What to do</th></tr></thead>
+            <tbody>
+                <tr><td>50 mm/s</td><td>300</td><td>150</td><td>Buy a 3 V, 300 RPM N20</td></tr>
+                <tr><td>100 mm/s</td><td>600</td><td>300</td><td>Buy a 3 V N20 of about 500&ndash;600 RPM</td></tr>
+                <tr><td>150 mm/s</td><td>900</td><td>450</td><td>Buy about 500 RPM, and drive gently or use field mode</td></tr>
+                <tr><td>200 mm/s or more</td><td>1,200+</td><td>600+</td><td>Slow the combine down: drive gently, or fit field mode</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="diagram-grid cols-3">
+        <div class="diagram-panel y">
+            <h4>Buy a 3 V N20</h4>
+            <p>The toy&rsquo;s battery is 3.7&nbsp;V, and the diode drops about 0.4&nbsp;V, leaving roughly 3.3&nbsp;V &mdash; right for a <strong>3&nbsp;V</strong> motor. A 6&nbsp;V N20 would run at only about half its rated speed. Pick a listing that gives the RPM at 3&nbsp;V.</p>
+        </div>
+        <div class="diagram-panel r">
+            <h4>Faster motors are weaker</h4>
+            <p>The gearbox trades speed for force, so a 900&nbsp;RPM N20 has roughly a third of the turning force of a 300&nbsp;RPM one. With a fast motor, keep the cut width to 120&nbsp;mm or less and wax the knife well.</p>
+        </div>
+        <div class="diagram-panel g">
+            <h4>Too fast?</h4>
+            <p>With <strong>proportional</strong> throttle, just drive gently. With <strong>on/off</strong> throttle, add the optional <strong>field-mode</strong> resistor on the next page: it slows the wheels but not the knife.</p>
+        </div>
+    </div>
+
+    <div class="callout deck-only">
+        <div class="callout-label">Try your numbers</div>
+        <p>Put your measured speed and a motor RPM into the <a href="#slide-08">cutter-bar simulator</a> and see whether the stems get cut or flattened.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-33">
+    <div class="slide-number">33</div>
+    <h2>The drive-tap circuit</h2>
+    <p>The toy&rsquo;s circuit board sends power down two wires to the drive motor: one way round to go forward, the other way round to reverse. We <strong>tap</strong> those two wires and send some of that power to the N20.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/korody_wiring.svg" alt="Tap on the drive motor wires through a 300 mA fuse, Schottky diode, cutter switch and JST plug to a 3 V N20, with an optional field-mode resistor">
+        <figcaption class="photo-caption">Wire A is the one that is + when driving forward. The tap goes fuse &rarr; diode &rarr; cutter switch &rarr; plug &rarr; N20, and back to wire B. The dashed box is optional: a resistor that slows only the wheels, with a switch to bypass it.</figcaption>
+    </figure>
+
+    <div class="diagram-grid cols-2">
+        <div class="diagram-panel y">
+            <h4>Fuse &mdash; protects the toy</h4>
+            <p>The toy&rsquo;s motor-driver chip was sized for the toy&rsquo;s own motors. The 300&nbsp;mA self-resetting fuse makes sure a jammed knife can never pull too much current through it.</p>
+        </div>
+        <div class="diagram-panel">
+            <h4>Diode &mdash; forward only</h4>
+            <p>A diode is a one-way valve for electricity. Forward: it lets current through and the knife cuts. Reverse: it blocks, so backing up doesn&rsquo;t cut. A <strong>Schottky</strong> diode wastes less voltage than an ordinary one.</p>
+        </div>
+        <div class="diagram-panel g">
+            <h4>Cutter switch and plug</h4>
+            <p>Switch OFF to drive around without cutting. The JST plug lets the header come off, turning it back into a normal toy.</p>
+        </div>
+        <div class="diagram-panel r">
+            <h4>Field mode (optional)</h4>
+            <p>A 2.2&nbsp;&Omega; resistor in wire A <em>after</em> the tap slows the wheels but not the knife. A bypass switch across it gives full speed back. Try 1&ndash;4.7&nbsp;&Omega;: bigger is slower but weaker.</p>
+        </div>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Part</th><th>What to look for</th><th>About</th></tr></thead>
+            <tbody>
+                <tr><td><strong>N20 gear motor</strong></td><td>3 V rated, RPM from the table on the previous page, 3 mm D-shaft</td><td>&pound;4</td></tr>
+                <tr><td><strong>Schottky diode</strong></td><td>1N5819 (1 A)</td><td>10p</td></tr>
+                <tr><td><strong>Resettable fuse</strong></td><td>PTC polyfuse, 300 mA hold current</td><td>&pound;1</td></tr>
+                <tr><td><strong>Capacitor</strong></td><td>100 nF ceramic (&ldquo;104&rdquo;)</td><td>20p</td></tr>
+                <tr><td><strong>Cutter switch</strong></td><td>Mini slide switch</td><td>&pound;1</td></tr>
+                <tr><td><strong>Plug and socket</strong></td><td>2-pin JST pair with short leads</td><td>&pound;2</td></tr>
+                <tr><td><strong>Wire and heat-shrink</strong></td><td>Thin silicone wire (26 AWG), small heat-shrink tubing</td><td>&pound;3</td></tr>
+                <tr><td><strong>LED tester</strong></td><td>Any LED, 100 &Omega; resistor, two crocodile-clip leads</td><td>&pound;1</td></tr>
+                <tr><td><strong>Field mode</strong> (optional)</td><td>2.2 &Omega; 2 W resistor, second mini slide switch</td><td>60p</td></tr>
+                <tr><td><strong>Header</strong></td><td>Foam board, 1 mm plastic, lolly stick, split pins, small tub &mdash; as in the main build</td><td>&mdash;</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="slide" id="slide-34">
+    <div class="slide-number">34</div>
+    <h2>Build K1 &mdash; The field with tramlines</h2>
+    <p>A combine this size can&rsquo;t drive over the tray walls, and its tyres shouldn&rsquo;t squash the crop. So it drives along two raised <strong>tramlines</strong> &mdash; the same name farmers use for the wheel tracks left in a field &mdash; with the cress tray sunk between them.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/korody_field.svg" alt="Front view: tyres on two foam-board tramlines, sunken tray between them, knife height H and a 15 mm cut">
+        <figcaption class="photo-caption">Seen from the front. Tramline tops are level with the tray rim. The knife runs H above the tramlines, so the cress bed sits (15 &minus; H)&nbsp;mm below them to give a 15&nbsp;mm cut.</figcaption>
+    </figure>
+
+    <ol class="steps">
+        <li><strong>Choose the tray.</strong> Its outside width must be at most your <strong>tyre gap &minus; 20&nbsp;mm</strong> (measurement 3). A 140&nbsp;mm gap allows a 120&nbsp;mm tray. It should be 20&ndash;30&nbsp;mm deep.</li>
+        <li><strong>Base board.</strong> At least 700&nbsp;mm long and 100&nbsp;mm wider than the combine. Put the tray in the middle with a 250&nbsp;mm run-up at each end.</li>
+        <li><strong>Tramlines.</strong> Stack and glue foam-board strips until they&rsquo;re as tall as the tray rim. Each strip is the tyre width + 30&nbsp;mm wide. Glue them alongside the tray so each tyre runs down the middle of its tramline. <span class="who">grown-up: knife and glue</span></li>
+        <li><strong>Kerbs.</strong> Glue lolly sticks on edge along both sides of each tramline, leaving about 5&nbsp;mm of space either side of the tyre. They nudge the combine straight if the steering drifts.</li>
+        <li><strong>Ramps.</strong> At each end, a foam-board wedge at least 120&nbsp;mm long lets the combine drive up onto the tramlines. If it struggles, make the ramp longer.</li>
+        <li><strong>The bed.</strong> After Build K2, when you know H: fold kitchen paper so the bed surface is <strong>(15 &minus; H)&nbsp;mm</strong> below the rim. If H is 5&nbsp;mm, the bed sits 10&nbsp;mm down. Then sow as on <a href="#slide-11">the growing page</a>.</li>
+    </ol>
+</section>
+
+<section class="slide" id="slide-35">
+    <div class="slide-number">35</div>
+    <h2>Build K2 &mdash; The new header</h2>
+    <p>The header is the same scissor cutter as the main build, resized for your combine and fixed to the part of a spare head that clips onto the toy.</p>
+
+    <figure class="diagram-fig">
+        <img src="diagrams/korody_header.svg" alt="Top view of the header: guard and knife teeth, mount plate, catch tank, N20 and crank inside the header width, frame arms to the clip part of the spare head, and JST plug">
+        <figcaption class="photo-caption">From above. The N20 and crank sit on the mount plate inside the header&rsquo;s width, the catch tank is right behind the knife, and two foam-board arms join everything to the clip kept from the spare head.</figcaption>
+    </figure>
+
+    <ol class="steps">
+        <li><strong>Choose the cut width.</strong> At least tray width + 10&nbsp;mm; at most header width &minus; 60&nbsp;mm; and no more than 120&nbsp;mm with a fast N20. Number of teeth = cut width &divide; 10.</li>
+        <li><strong>Build the cutter sandwich</strong> exactly as in <a href="#slide-14">Build 2</a>, resized: guard comb = cut width, knife = cut width + 12&nbsp;mm, mount plate = cut width + 60&nbsp;mm, spacer = cut width.</li>
+        <li><strong>Motor and crank</strong> as in <a href="#slide-15">Build 3</a>, using the 3&nbsp;V N20. The shaft hole is 47&nbsp;mm past the end of the guard and 15&nbsp;mm from the back of the plate. Solder or clip the 100&nbsp;nF capacitor across the motor.</li>
+        <li><strong>The clip.</strong> Choose the head you&rsquo;ll give up; the folding low-level head is a good choice. Study how it attaches, then carefully cut away everything except the part that clips onto the toy, and file it smooth. <span class="who">grown-up: junior hacksaw</span></li>
+        <li><strong>Frame.</strong> Glue two foam-board arms from the back of the mount plate to the clip, and pin each joint with a split pin. Glue the catch tank &mdash; a small tub with its front wall cut down to 8&nbsp;mm &mdash; between the arms, just behind the knife. <span class="who">grown-up: glue</span></li>
+        <li><strong>Plug.</strong> Glue the JST plug to the frame near the clip, wire it to the N20 red-to-red, and tie the wires clear of the crank.</li>
+        <li><strong>Weigh and balance.</strong> Aim for 50&nbsp;g or less on kitchen scales. Clip it on. If the nose dips or the wheels spin, put a few coins stuck with sticky tack inside the grain tank.</li>
+        <li><strong>Check the steering.</strong> Turn fully left and right: the header must not rub the front tyres. Then <strong>measure H</strong> (measurement 5).</li>
+    </ol>
+
+    <div class="callout">
+        <div class="callout-label">If the heads fix on differently</div>
+        <p>Copy the clip shape in layers of foam board, or design and 3D-print a bracket that matches it, as in <a href="#slide-24">Upgrade 6</a>.</p>
+    </div>
+</section>
+
+<section class="slide" id="slide-36">
+    <div class="slide-number">36</div>
+    <h2>Build K3 &mdash; Opening the toy and wiring the tap</h2>
+    <p>This is the part where a grown-up takes charge. There&rsquo;s a lithium-ion battery inside, and the joints need soldering.</p>
+
+    <ol class="steps">
+        <li><strong>Power off.</strong> Switch the toy off. If its battery comes out, take it out and put it somewhere safe. Never cut, pierce or solder anywhere near the battery. <span class="who">grown-up</span></li>
+        <li><strong>Open it up.</strong> Take a photo before each step. Undo the screws underneath with a small cross-head screwdriver and keep them in an egg box in order. Don&rsquo;t force clips. <span class="who">grown-up</span></li>
+        <li><strong>Find the drive motor</strong> &mdash; the one geared to the wheels that turn when you go forward and back, not the one that steers. Follow its two wires to the circuit board.</li>
+        <li><strong>Find wire A.</strong> Battery back in, body open, wheels off the table. Clip the LED tester across the drive-motor terminals and press forward (see <a href="#slide-31">the tester</a>). Mark wire A with tape. <strong>Battery out again.</strong></li>
+        <li><strong>Solder the tap.</strong> Solder a 15&nbsp;cm red silicone wire to wire A and a black one to wire B, where they join the motor, and cover the joints with heat-shrink. If you&rsquo;re fitting field mode, make the tap at the <em>board</em> end of the motor wires instead. <span class="who">grown-up: soldering</span></li>
+        <li><strong>Fuse and diode</strong> in the red wire, close to the tap: fuse first, then the 1N5819 with its <strong>stripe pointing away from the toy</strong>, towards the N20. Heat-shrink over both. <span class="who">grown-up: soldering</span></li>
+        <li><strong>Cutter switch.</strong> Mount the mini slide switch somewhere you can reach, such as the back of the grain tank, and wire it into the red wire after the diode.</li>
+        <li><strong>Route the wires out</strong> through an existing gap, such as under the feeder house. Make sure no screw or body clip can pinch them, and add a cable tie inside as strain relief. Keep them away from the smoke unit&rsquo;s heater. Fit the JST socket on the end.</li>
+        <li><strong>Field mode (optional).</strong> Cut wire A between the tap and the motor, solder the 2.2&nbsp;&Omega; resistor into the gap, and wire the second slide switch across the resistor. Mount the resistor where air reaches it, not against plastic. <span class="who">grown-up: soldering</span></li>
+        <li><strong>Close up and check</strong> the toy still drives, reverses, steers, lights up and makes its sounds before you plug in the header.</li>
+    </ol>
+</section>
+
+<section class="slide" id="slide-37">
+    <div class="slide-number">37</div>
+    <h2>Build K4 &mdash; Test, tune and harvest</h2>
+
+    <h3>Bench tests (wheels off the table)</h3>
+    <ol class="steps">
+        <li><strong>Forward:</strong> header plugged in, cutter switch ON, push the stick forward. The knife should run.</li>
+        <li><strong>Reverse:</strong> the knife should <strong>stop</strong>. If it runs in reverse and not forward, the tap wires are swapped &mdash; swap them at the tap, not by turning the diode round.</li>
+        <li><strong>Let go:</strong> everything stops. <strong>Cutter switch OFF:</strong> wheels turn, knife doesn&rsquo;t.</li>
+        <li><strong>Range test:</strong> walk 10&nbsp;m away and drive with the knife running. If the combine stutters or ignores the remote, the motor is making radio noise: check the capacitor, twist the two N20 wires together, and keep them away from the receiver.</li>
+    </ol>
+
+    <h3>First harvest</h3>
+    <ol class="steps" style="counter-reset: step 4;">
+        <li><strong>Speed check.</strong> Re-time the 1&nbsp;m run with the header on. Much slower than before means the knife is too stiff: wax it and check the arm isn&rsquo;t rubbing.</li>
+        <li><strong>Line up</strong> on the run-up with the tyres between the kerbs. Cutter switch ON.</li>
+        <li><strong>Drive forward gently and steadily</strong> along the tray. Stop on the far run-up.</li>
+        <li><strong>Cutter switch OFF and toy OFF</strong> before anyone&rsquo;s fingers go near the knife. Empty the catch tank into a sieve and rinse the cress.</li>
+    </ol>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>What you see</th><th>Why</th><th>What to do</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Knife never runs</strong></td><td>Cutter switch, plug, fuse or diode</td><td>Check the switch is ON and the plug is red-to-red; let the fuse cool; check the diode stripe points to the N20</td></tr>
+                <tr><td><strong>Knife runs only in reverse</strong></td><td>Tapped wires swapped</td><td>Swap the red and black tap wires at the motor end</td></tr>
+                <tr><td><strong>Toy slows or stutters when cutting</strong></td><td>Too much load on the toy&rsquo;s driver</td><td>Wax the knife; use a slower-RPM N20; reduce cut width</td></tr>
+                <tr><td><strong>Stems flattened, not cut</strong></td><td>Driving too fast for the knife</td><td>Drive more gently; fit field mode; faster N20 (check the RPM table)</td></tr>
+                <tr><td><strong>Knife slow at gentle throttle</strong></td><td>Proportional throttle slows the N20 too</td><td>Normal &mdash; distance per cut stays about the same</td></tr>
+                <tr><td><strong>Combine drifts off the tramlines</strong></td><td>Steering not centred</td><td>Use the remote&rsquo;s steering trim if it has one; move the kerbs closer</td></tr>
+                <tr><td><strong>Wheels spin on the ramp</strong></td><td>Nose-heavy header or steep ramp</td><td>Counterweight coins; longer ramp; lighter header</td></tr>
+                <tr><td><strong>Battery runs out quickly</strong></td><td>The N20 shares the toy&rsquo;s 500 mAh battery</td><td>Expect a shorter play time; cutter switch OFF when not harvesting</td></tr>
+                <tr><td><strong>Field-mode resistor gets hot</strong></td><td>Motor current through the resistor</td><td>Normal if you can still hold it; if not, use a higher-watt or larger-value resistor</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="slide" id="slide-38">
+    <div class="slide-number">38</div>
+    <h2>Conversion safety</h2>
+    <p>Everything in <a href="#slide-26">the safety plan</a> still applies. The conversion adds these:</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Risk</th><th>What we do about it</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Lithium-ion battery</strong></td><td>A grown-up opens the toy. Battery out or toy switched off while working. Never cut, pierce, short or solder near the cell. Charge only with the toy&rsquo;s own USB lead, on a hard surface, while someone is around. Stop using it if it swells, smells or gets hot.</td></tr>
+                <tr><td><strong>Soldering</strong></td><td>Grown-up only, iron in its stand, window open, heat-shrink over every joint so no bare metal can touch.</td></tr>
+                <tr><td><strong>Smoke unit heater</strong></td><td>Wires routed well away from it. Don&rsquo;t fill it with water during harvesting &mdash; keeps water away from the new wiring and the food.</td></tr>
+                <tr><td><strong>Losing radio control</strong></td><td>Capacitor across the N20, twisted wires, and a 10 m range test with the knife running before every harvest session.</td></tr>
+                <tr><td><strong>Fingers in the cutter</strong></td><td>The stick is the hold-to-run control; the diode stops cutting in reverse; cutter switch OFF <em>and</em> toy OFF before touching the knife; remote put down away from the field.</td></tr>
+                <tr><td><strong>Overloading the toy</strong></td><td>300 mA fuse in the tap; header unplugged when not harvesting.</td></tr>
+                <tr><td><strong>Warranty</strong></td><td>Opening the toy will probably end its warranty &mdash; decide that together first.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="callout g">
+        <div class="callout-label">Why this is still a sensible project</div>
+        <p>The dangerous parts &mdash; opening the toy and soldering &mdash; happen once, with a grown-up. After that the toy works exactly as before, with a plastic scissor knife that can only move while someone is driving forward, on a 3.7 V battery protected by a fuse.</p>
     </div>
 </section>
 
