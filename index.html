@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-concept="ticket" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,62 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style id="deck-concept">@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Courier+Prime:wght@700&display=swap');
+html[data-concept=ticket] .hero{min-height:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);column-gap:2.75rem;align-items:start;align-content:start;justify-items:start;text-align:left;max-width:1180px;margin:0 auto;padding:2rem 1.75rem 3.5rem}
+html[data-concept=ticket] .hero::before,html[data-concept=ticket] .hero::after{display:none}
+html[data-concept=ticket] .hero>*{grid-column:1;margin-left:0;margin-right:0}
+html[data-concept=ticket] .hero .series-label{display:none}
+html[data-concept=ticket] .cx-head{grid-column:1/-1;width:100%;display:flex;justify-content:space-between;gap:1rem;font-family:var(--font-mono);font-size:.8rem;color:var(--text-secondary);border-bottom:1px solid var(--border);padding-bottom:.5rem;margin-bottom:2.25rem}
+html[data-concept=ticket] .cx-head span:first-child{color:var(--text-primary)}
+html[data-concept=ticket] .hero h1{font-size:clamp(2rem,4.3vw,3.2rem);line-height:1.08;letter-spacing:-.015em;margin-bottom:1rem}
+html[data-concept=ticket] .hero h1 .accent{color:var(--accent)}
+html[data-concept=ticket] .hero .subtitle{max-width:none;margin-bottom:1.5rem}
+html[data-concept=ticket] .hero .tags{justify-content:flex-start;gap:.25rem 1rem;margin-bottom:1.25rem}
+html[data-concept=ticket] .tag{background:none;border:0;border-radius:0;padding:0;color:var(--text-primary);font-family:var(--font-mono);font-size:.8rem}
+html[data-concept=ticket] .hero .tag::before{content:'◦\00a0';color:var(--accent)}
+html[data-concept=ticket] .hero .pipeline{justify-content:flex-start;margin-bottom:0}
+html[data-concept=ticket] .pipeline-step{background:none;border:0;border-radius:0;padding:0;color:var(--text-secondary);font-family:var(--font-mono);font-size:.78rem}
+html[data-concept=ticket] .cx-fig{grid-column:2;grid-row:2/span 6;width:100%;margin:0}
+html[data-concept=ticket] .cx-fig figcaption{font-size:.88rem;line-height:1.5;color:var(--text-secondary);margin-top:.55rem}
+html[data-concept=ticket] .concept-art{display:block;width:100%;height:auto;overflow:hidden}
+html[data-concept=ticket] .slide-number{font-family:var(--font-mono);font-size:.78rem;font-weight:400;color:var(--text-secondary);top:4.4rem;right:1.5rem}
+html[data-concept=ticket] .slide-number::before{content:''}
+html[data-concept=ticket] .slide h2{color:var(--text-primary);padding-right:3.5rem}
+html[data-concept=ticket] .slide h2::after{content:'';display:block;width:4rem;height:3px;margin-top:.55rem;background:var(--accent)}
+html[data-concept=ticket] .callout .callout-label,html[data-concept=ticket] .metric .metric-label{text-transform:none;letter-spacing:0;font-size:.82rem}
+html[data-concept=ticket] .callout,html[data-concept=ticket] .diagram-grid,html[data-concept=ticket] .canvas-wrap,html[data-concept=ticket] .control-panel,html[data-concept=ticket] .diagram-panel,html[data-concept=ticket] .metric,html[data-concept=ticket] .btn,html[data-concept=ticket] .tag{border-radius:2px}
+@media (max-width:820px){
+ html[data-concept=ticket] .hero{grid-template-columns:minmax(0,1fr);padding:1.25rem 1rem 2.5rem}
+ html[data-concept=ticket] .cx-fig{grid-column:1;grid-row:auto;order:10;margin-top:1.5rem}
+}
+
+html[data-concept=ticket] .hero h1 .accent-2{color:var(--accent-2)}
+html[data-concept=ticket] .concept-art{filter:drop-shadow(0 12px 22px rgba(0,0,0,.45))}
+html[data-concept=ticket] .concept-art .tk-bg{fill:#14161a}
+html[data-concept=ticket] .concept-art .tk-card{stroke:#6d5e43;stroke-width:1.2}
+html[data-concept=ticket] .concept-art .tk-band{fill:rgba(0,0,0,.08)}
+html[data-concept=ticket] .concept-art text{fill:#2b2318}
+html[data-concept=ticket] .concept-art .tk-small{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.04em}
+html[data-concept=ticket] .concept-art .tk-serial{font-family:'Courier Prime',monospace;font-size:18px}
+html[data-concept=ticket] .concept-art .tk-kind{font-family:'Oswald',sans-serif;font-weight:700;font-size:20px;letter-spacing:.12em}
+html[data-concept=ticket] .concept-art .tk-from,html[data-concept=ticket] .concept-art .tk-to{font-family:'Oswald',sans-serif;font-weight:700;font-size:26px}
+html[data-concept=ticket] .concept-art .tk-arrow{fill:none;stroke:#2b2318;stroke-width:2.4}
+html[data-concept=ticket] .concept-art .tk-fare{font-family:'Courier Prime',monospace;font-size:14px}
+html[data-concept=ticket] .concept-art .tk-date{font-family:'Courier Prime',monospace;font-size:22px;fill:#7a2a24;opacity:.75}
+html[data-concept=ticket] .concept-art .tk-clip{fill:#14161a}
+html[data-concept=ticket] .concept-art .sp-bg{fill:#14161a}
+html[data-concept=ticket] .concept-art .sp-packet{fill:#f3ead2;stroke:#8a7a55}
+html[data-concept=ticket] .concept-art .sp-flap{fill:#e2d5b2;stroke:#8a7a55}
+html[data-concept=ticket] .concept-art .sp-window{fill:#fbf7ec;stroke:#8a7a55}
+html[data-concept=ticket] .concept-art .sp-name{font-family:'Oswald',sans-serif;font-weight:700;font-size:34px;fill:#2f6a2d;letter-spacing:.08em}
+html[data-concept=ticket] .concept-art .sp-latin{font-family:Georgia,serif;font-style:italic;font-size:13px;fill:#5d5236}
+html[data-concept=ticket] .concept-art .sp-stem{fill:none;stroke:#7fae5a;stroke-width:1.4}
+html[data-concept=ticket] .concept-art .sp-leaf{fill:#4c9a3f}
+html[data-concept=ticket] .concept-art .sp-combine{fill:#d9a400;stroke:#7a5c00}
+html[data-concept=ticket] .concept-art .sp-knife{fill:#9aa3a8}
+html[data-concept=ticket] .concept-art .sp-wheel{fill:#2b2b2b}
+html[data-concept=ticket] .concept-art .sp-small{font-family:'Oswald',sans-serif;font-size:11px;fill:#3f3622}
+</style>
 </head>
 <body>
 
@@ -27,6 +83,7 @@
 </nav>
 
 <header class="hero">
+<!-- deck-concept:start --><div class="cx-head" aria-hidden="true"><span>JW projects</span><span>Cress farming</span></div><figure class="cx-fig"><svg class="concept-art" viewBox="0 0 480 300" role="img" aria-label="A cress seed packet with sprouts and a toy combine harvester" xmlns="http://www.w3.org/2000/svg"><rect class="sp-bg" width="480" height="300" rx="6"/><path class="sp-packet" d="M120 34 L360 34 L360 288 L120 288 Z"/><path class="sp-flap" d="M120 34 L132 18 L348 18 L360 34 Z"/><text class="sp-name" x="240.0" y="74" text-anchor="middle">CRESS</text><text class="sp-latin" x="240.0" y="94" text-anchor="middle">Lepidium sativum</text><rect class="sp-window" x="140" y="108" width="200" height="110" rx="4"/><path class="sp-stem" d="M153 206 q -0.8 -17.898063027663568 0 -35.796126055327136"/><ellipse class="sp-leaf" cx="150" cy="170.2" rx="4" ry="2.4" transform="rotate(-25 150 170.2)"/><ellipse class="sp-leaf" cx="156" cy="170.2" rx="4" ry="2.4" transform="rotate(25 156 170.2)"/><path class="sp-stem" d="M161.6 206 q -2.6 -18.631482736972487 0 -37.26296547394497"/><ellipse class="sp-leaf" cx="158.6" cy="168.7" rx="4" ry="2.4" transform="rotate(-25 158.6 168.7)"/><ellipse class="sp-leaf" cx="164.6" cy="168.7" rx="4" ry="2.4" transform="rotate(25 164.6 168.7)"/><path class="sp-stem" d="M166.5 206 q -1.4 -20.53722173886814 0 -41.07444347773628"/><ellipse class="sp-leaf" cx="163.5" cy="164.9" rx="4" ry="2.4" transform="rotate(-25 163.5 164.9)"/><ellipse class="sp-leaf" cx="169.5" cy="164.9" rx="4" ry="2.4" transform="rotate(25 169.5 164.9)"/><path class="sp-stem" d="M174.5 206 q -0.2 -21.960803519594165 0 -43.92160703918833"/><ellipse class="sp-leaf" cx="171.5" cy="162.1" rx="4" ry="2.4" transform="rotate(-25 171.5 162.1)"/><ellipse class="sp-leaf" cx="177.5" cy="162.1" rx="4" ry="2.4" transform="rotate(25 177.5 162.1)"/><path class="sp-stem" d="M184.1 206 q 0.8 -17.287178878294014 0 -34.57435775658803"/><ellipse class="sp-leaf" cx="181.1" cy="171.4" rx="4" ry="2.4" transform="rotate(-25 181.1 171.4)"/><ellipse class="sp-leaf" cx="187.1" cy="171.4" rx="4" ry="2.4" transform="rotate(25 187.1 171.4)"/><path class="sp-stem" d="M188.6 206 q 2.2 -18.713745924566695 0 -37.42749184913339"/><ellipse class="sp-leaf" cx="185.6" cy="168.6" rx="4" ry="2.4" transform="rotate(-25 185.6 168.6)"/><ellipse class="sp-leaf" cx="191.6" cy="168.6" rx="4" ry="2.4" transform="rotate(25 191.6 168.6)"/><path class="sp-stem" d="M197.3 206 q 1 -19.671266705813412 0 -39.342533411626825"/><ellipse class="sp-leaf" cx="194.3" cy="166.7" rx="4" ry="2.4" transform="rotate(-25 194.3 166.7)"/><ellipse class="sp-leaf" cx="200.3" cy="166.7" rx="4" ry="2.4" transform="rotate(25 200.3 166.7)"/><path class="sp-stem" d="M202.7 206 q 0.5 -19.824072216581357 0 -39.64814443316271"/><ellipse class="sp-leaf" cx="199.7" cy="166.4" rx="4" ry="2.4" transform="rotate(-25 199.7 166.4)"/><ellipse class="sp-leaf" cx="205.7" cy="166.4" rx="4" ry="2.4" transform="rotate(25 205.7 166.4)"/><path class="sp-stem" d="M210.8 206 q 2.2 -13.27910576322775 0 -26.5582115264555"/><ellipse class="sp-leaf" cx="207.8" cy="179.4" rx="4" ry="2.4" transform="rotate(-25 207.8 179.4)"/><ellipse class="sp-leaf" cx="213.8" cy="179.4" rx="4" ry="2.4" transform="rotate(25 213.8 179.4)"/><path class="sp-stem" d="M218.7 206 q 2.3 -19.469415316592226 0 -38.93883063318445"/><ellipse class="sp-leaf" cx="215.7" cy="167.1" rx="4" ry="2.4" transform="rotate(-25 215.7 167.1)"/><ellipse class="sp-leaf" cx="221.7" cy="167.1" rx="4" ry="2.4" transform="rotate(25 221.7 167.1)"/><path class="sp-stem" d="M226.9 206 q -0.6 -21.28988800825487 0 -42.57977601650974"/><ellipse class="sp-leaf" cx="223.9" cy="163.4" rx="4" ry="2.4" transform="rotate(-25 223.9 163.4)"/><ellipse class="sp-leaf" cx="229.9" cy="163.4" rx="4" ry="2.4" transform="rotate(25 229.9 163.4)"/><path class="sp-stem" d="M234.4 206 q 2.6 -17.001589504456845 0 -34.00317900891369"/><ellipse class="sp-leaf" cx="231.4" cy="172" rx="4" ry="2.4" transform="rotate(-25 231.4 172)"/><ellipse class="sp-leaf" cx="237.4" cy="172" rx="4" ry="2.4" transform="rotate(25 237.4 172)"/><path class="sp-stem" d="M241.9 206 q -2.2 -13.877088787577895 0 -27.75417757515579"/><ellipse class="sp-leaf" cx="238.9" cy="178.2" rx="4" ry="2.4" transform="rotate(-25 238.9 178.2)"/><ellipse class="sp-leaf" cx="244.9" cy="178.2" rx="4" ry="2.4" transform="rotate(25 244.9 178.2)"/><path class="sp-stem" d="M246.5 206 q -0.4 -21.68932125008383 0 -43.37864250016766"/><ellipse class="sp-leaf" cx="243.5" cy="162.6" rx="4" ry="2.4" transform="rotate(-25 243.5 162.6)"/><ellipse class="sp-leaf" cx="249.5" cy="162.6" rx="4" ry="2.4" transform="rotate(25 249.5 162.6)"/><path class="sp-stem" d="M255.3 206 q 0 -15.709235785829549 0 -31.418471571659097"/><ellipse class="sp-leaf" cx="252.3" cy="174.6" rx="4" ry="2.4" transform="rotate(-25 252.3 174.6)"/><ellipse class="sp-leaf" cx="258.3" cy="174.6" rx="4" ry="2.4" transform="rotate(25 258.3 174.6)"/><path class="sp-stem" d="M261.5 206 q 0.5 -16.15819439893162 0 -32.31638879786324"/><ellipse class="sp-leaf" cx="258.5" cy="173.7" rx="4" ry="2.4" transform="rotate(-25 258.5 173.7)"/><ellipse class="sp-leaf" cx="264.5" cy="173.7" rx="4" ry="2.4" transform="rotate(25 264.5 173.7)"/><path class="sp-stem" d="M269.5 206 q 1.1 -21.137815937629973 0 -42.27563187525995"/><ellipse class="sp-leaf" cx="266.5" cy="163.7" rx="4" ry="2.4" transform="rotate(-25 266.5 163.7)"/><ellipse class="sp-leaf" cx="272.5" cy="163.7" rx="4" ry="2.4" transform="rotate(25 272.5 163.7)"/><path class="sp-stem" d="M278.1 206 q 2.9 -20.707605097570802 0 -41.415210195141604"/><ellipse class="sp-leaf" cx="275.1" cy="164.6" rx="4" ry="2.4" transform="rotate(-25 275.1 164.6)"/><ellipse class="sp-leaf" cx="281.1" cy="164.6" rx="4" ry="2.4" transform="rotate(25 281.1 164.6)"/><path class="sp-stem" d="M284.3 206 q 2.2 -14.467896597739628 0 -28.935793195479256"/><ellipse class="sp-leaf" cx="281.3" cy="177.1" rx="4" ry="2.4" transform="rotate(-25 281.3 177.1)"/><ellipse class="sp-leaf" cx="287.3" cy="177.1" rx="4" ry="2.4" transform="rotate(25 287.3 177.1)"/><path class="sp-stem" d="M292.7 206 q 0.4 -21.14226386061013 0 -42.28452772122026"/><ellipse class="sp-leaf" cx="289.7" cy="163.7" rx="4" ry="2.4" transform="rotate(-25 289.7 163.7)"/><ellipse class="sp-leaf" cx="295.7" cy="163.7" rx="4" ry="2.4" transform="rotate(25 295.7 163.7)"/><path class="sp-stem" d="M298.9 206 q 2 -14.900124853080385 0 -29.80024970616077"/><ellipse class="sp-leaf" cx="295.9" cy="176.2" rx="4" ry="2.4" transform="rotate(-25 295.9 176.2)"/><ellipse class="sp-leaf" cx="301.9" cy="176.2" rx="4" ry="2.4" transform="rotate(25 301.9 176.2)"/><path class="sp-stem" d="M305.5 206 q -2.6 -15.564617157875848 0 -31.129234315751695"/><ellipse class="sp-leaf" cx="302.5" cy="174.9" rx="4" ry="2.4" transform="rotate(-25 302.5 174.9)"/><ellipse class="sp-leaf" cx="308.5" cy="174.9" rx="4" ry="2.4" transform="rotate(25 308.5 174.9)"/><path class="sp-stem" d="M313.8 206 q -2.5 -21.908254134294232 0 -43.816508268588464"/><ellipse class="sp-leaf" cx="310.8" cy="162.2" rx="4" ry="2.4" transform="rotate(-25 310.8 162.2)"/><ellipse class="sp-leaf" cx="316.8" cy="162.2" rx="4" ry="2.4" transform="rotate(25 316.8 162.2)"/><path class="sp-stem" d="M320.8 206 q -2.1 -16.69415644611318 0 -33.38831289222636"/><ellipse class="sp-leaf" cx="317.8" cy="172.6" rx="4" ry="2.4" transform="rotate(-25 317.8 172.6)"/><ellipse class="sp-leaf" cx="323.8" cy="172.6" rx="4" ry="2.4" transform="rotate(25 323.8 172.6)"/><path class="sp-stem" d="M326 206 q 2.2 -19.9191269854961 0 -39.8382539709922"/><ellipse class="sp-leaf" cx="323" cy="166.2" rx="4" ry="2.4" transform="rotate(-25 323 166.2)"/><ellipse class="sp-leaf" cx="329" cy="166.2" rx="4" ry="2.4" transform="rotate(25 329 166.2)"/><path class="sp-stem" d="M332.2 206 q -2.7 -18.530792756786276 0 -37.06158551357255"/><ellipse class="sp-leaf" cx="329.2" cy="168.9" rx="4" ry="2.4" transform="rotate(-25 329.2 168.9)"/><ellipse class="sp-leaf" cx="335.2" cy="168.9" rx="4" ry="2.4" transform="rotate(25 335.2 168.9)"/><rect class="sp-combine" x="270.0" y="188" width="44" height="18" rx="3"/><rect class="sp-combine" x="306.0" y="176" width="14" height="14" rx="2"/><rect class="sp-knife" x="252.0" y="200" width="22" height="5"/><circle class="sp-wheel" cx="282.0" cy="208" r="6"/><circle class="sp-wheel" cx="308.0" cy="208" r="6"/><text class="sp-small" x="140" y="240">SOW: on damp tissue, indoors</text><text class="sp-small" x="140" y="256">HARVEST: after about 7 days</text><text class="sp-small" x="140" y="272">CUT WITH: one small combine</text></svg><figcaption>Grow it in a week, cut it with a harvester you built yourself.</figcaption></figure><!-- deck-concept:end -->
     <div class="series-label">JW Projects &mdash; Cress Farming</div>
     <h1>Build a <span class="accent">Cress</span> Combine <span class="accent-2">Harvester</span></h1>
     <p class="subtitle">A small working harvester that cuts home-grown cress with a scissor-action knife, driven by a tiny N20 gear motor. How real combines work, coloured diagrams, a shopping list, step-by-step build instructions, a safety plan, seven ways to upgrade it &mdash; and how to convert a Korody RC combine so its cutter runs whenever you drive.</p>
